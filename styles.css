@@ -1,0 +1,24 @@
+body {
+  background-color: #085F63;
+  margin: 0; /* Supprimer les marges par défaut du body */
+  padding: 0; /* Supprimer les marges par défaut du body */
+}
+
+h1 {
+  font-size: 2em; /* Taille maximale de la police pour h1 */
+  color:antiquewhite;
+}
+
+h2 {
+  font-size: 1.5em; /* Taille relative pour h2 */
+  color:azure;
+}
+
+h3 {
+  font-size: 1.2em; /* Taille relative pour h3 */
+}
+
+
+p {
+  color: blanchedalmond;
+}

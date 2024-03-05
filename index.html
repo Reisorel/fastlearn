@@ -13,10 +13,11 @@
   <nav>
     <ul>
         <li><a href="#variables">Variables et opérateurs</a></li>
-        <li><a href="#boîtes">Boucles</a></li>
+        <li><a href="#boîtes">Boîtes</a></li>
         <li><a href="#fonctions">Fonctions</a></li>
         <li><a href="#logique">La logique</a></li>
         <li><a href="#mémoire">Emplacements de mémoire</a></li>
+        <li><a href="#tableaux">Les tableaux</a></li>
     </ul>
   </nav>
 
@@ -25,16 +26,22 @@
     <section id="variables">
       <h1>1 - Les variables et les opérateurs</h1>
       <section id="cours">
-      <h1>Cours </h1>
+        <h1>Cours </h1>
+
         <h2>Variables</h2>
+
         <h2>Déclarations de variables</h2>
-        <h2>Concaténation</h2>
-        <p>Joindre plusieurs chaînes de caractères ensemble pour former une seule chaîne avec l'opérateur "+"</p>
-        <h2>Portée des variables</h2>
-        <p>Let et const sont block-scoped (condition, switch, fonction, boucle for...)</p>
+        <p>let / const / var (obsolète)</p>
+        <p>On peut redéclarer des variables var sans provoquer d'erreurs.</p>
         <p>On ne peut pas déclarer de const vide contrairement à let ou var.</p>
         <p>Les constantes doivent toujours être initialisées avec des valeurs</p>
-        <p>On peut redéclarer des variables var sans provoquer d'erreurs.</p>
+
+        <h2>Concaténation</h2>
+        <p>Joindre plusieurs chaînes de caractères ensemble pour former une seule chaîne avec l'opérateur "+"</p>
+
+        <h2>Portée des variables</h2>
+        <p>Let et const sont block-scoped (condition, switch, fonction, boucle for...)</p>
+
         <h2>Le Hoisting</h2>
         <p>toutes les variables se font hisser dans un objet "variable object"</p>
         <p>Une variable var se fait hoisted et peut être utilisée avant sa déclaration, car elle est initialisée à undefined.
@@ -42,6 +49,7 @@
         <p>Les déclarations de fonctions et de variables sont hissées en JavaScript. ELles sont stockées dans la mémoire du VO(Variables Object)
           du contexte d'exécution actuel et rendues disponibles dans le contexte d'exécution avant même que l'exécution du code ne commence.
         </p>
+
         <h2>les Closures</h2>
         <p>closure est une fonction interne qui a accès aux variables de son scope parent, même après que la fonction
           parent ait été exécutée et que son scope soit théoriquement "fermé". Cela permet à la fonction interne de conserver
@@ -51,8 +59,11 @@
 
       <section id="questions">
         <h1>Questions </h1>
+
         <h2>Prompt de révion pour les variables et les opérateurs</h2>
+
         <h3>prompt d'initialisation</h3>
+
         <p>Créer moi un quizz de 10 questions auquelles je dois réponde au fur et à mesure que tu me les poses.
         Modèle : Question 1 -> ma réponse -> analyse de la réponse / 1 point -> question 2 ect..
           <ul>4 niveaux de question vont-être proposés.
@@ -65,7 +76,7 @@
         <h3>Prompt de spécialisation</h3>
         <p>10 question niveau débutant sur les variables, déclarations de variables, portée des variables, concaténation, hoisting.</p>
         <p>10 question niveau intermédiaire sur les variables, déclarations de variables, portée des variables, concaténation, hoisting.</p>
-        <p>10 question niveau avancée sur les variables, déclarations de variables, portée des variables, concaténation, hoisting.</p>
+        <p>10 question niveau avancé sur les variables, déclarations de variables, portée des variables, concaténation, hoisting.</p>
         <p>10 question niveau expert sur les variables, déclarations de variables, portée des variables, concaténation, hoisting.</p>
         <!-- penser à intégrer lien pour le copier/coller direct dans le presse-papier -->
         <!-- penser à intégrer lien pour le quizz -->
@@ -89,6 +100,7 @@
         <h2>Types de fonctions</h2>
         <h2>Paramètres par défaut</h2>
         <h2>Fonctions déjà existantes</h2>
+        <h2>Recursivité</h2>
     </section>
     <br>
     <section id="logique">
@@ -108,11 +120,28 @@
         <h2>Stack</h2>
         <p>Stocke les variables locales et les références de fonction</p>
         <h2>Or/and</h2>
-
+    </section>
+    <br>
+    <section id="Tableaux">
+      <h1>6 - Les tableaux</h1>
+        <h2>Tableau simple</h2>
+        <p>...</p>
+        <h2>Tableau à plusieurs dimensions</h2>
+        <p>...</p>
+        <h2>Tableau associatif</h2>
+        <p>...</p>
+        <h2>Accèder à un élément index/length</h2>
+        <p>...</p>
+        <h2>Accèder à un élément push/unshift</h2>
+        <p>...</p>
+        <h2>Retirer un élément pop/shift</h2>
+        <p>...</p>
+        <h2>Retrouver un élement grâce à sa valeur</h2>
+        <p>...</p>
     </section>
 
   </main>
 
-  <script src = "javascript.js"></script>
+  <script src="javascript.js"></script>
 </body>
 </html>
