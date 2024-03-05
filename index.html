@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>site mémo JS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>site mémo Javascript</h1>
+  </header>
+  <nav>
+    <ul>
+        <li><a href="#variables">Variables et opérateurs</a></li>
+        <li><a href="#boîtes">Boucles</a></li>
+        <li><a href="#fonctions">Fonctions</a></li>
+        <li><a href="#logique">La logique</a></li>
+        <li><a href="#mémoire">Emplacements de mémoire</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="variables">
+      <h1>1 - Les variables et les opérateurs</h1>
+      <section id="cours">
+      <h1>Cours </h1>
+        <h2>Variables</h2>
+        <h2>Déclarations de variables</h2>
+        <h2>Concaténation</h2>
+        <p>Joindre plusieurs chaînes de caractères ensemble pour former une seule chaîne avec l'opérateur "+"</p>
+        <h2>Portée des variables</h2>
+        <p>Let et const sont block-scoped (condition, switch, fonction, boucle for...)</p>
+        <p>On ne peut pas déclarer de const vide contrairement à let ou var.</p>
+        <p>Les constantes doivent toujours être initialisées avec des valeurs</p>
+        <p>On peut redéclarer des variables var sans provoquer d'erreurs.</p>
+        <h2>Le Hoisting</h2>
+        <p>toutes les variables se font hisser dans un objet "variable object"</p>
+        <p>Une variable var se fait hoisted et peut être utilisée avant sa déclaration, car elle est initialisée à undefined.
+          Let & const sont hoisted mais pas initialisées.</p>
+        <p>Les déclarations de fonctions et de variables sont hissées en JavaScript. ELles sont stockées dans la mémoire du VO(Variables Object)
+          du contexte d'exécution actuel et rendues disponibles dans le contexte d'exécution avant même que l'exécution du code ne commence.
+        </p>
+        <h2>les Closures</h2>
+        <p>closure est une fonction interne qui a accès aux variables de son scope parent, même après que la fonction
+          parent ait été exécutée et que son scope soit théoriquement "fermé". Cela permet à la fonction interne de conserver
+          et d'utiliser les valeurs des variables externes même après la fin de l'exécution de la fonction parent.
+        </p>
+      </section>
+
+      <section id="questions">
+        <h1>Questions </h1>
+        <h2>Prompt de révion pour les variables et les opérateurs</h2>
+        <h3>prompt d'initialisation</h3>
+        <p>Créer moi un quizz de 10 questions auquelles je dois réponde au fur et à mesure que tu me les poses.
+        Modèle : Question 1 -> ma réponse -> analyse de la réponse / 1 point -> question 2 ect..
+          <ul>4 niveaux de question vont-être proposés.
+            <li>Niveau 1 : débutant</li>
+            <li>Niveau 2 : intermédiaire</li>
+            <li>Niveau 3 : avancé</li>
+            <li>Niveau 4 : expert</li>
+          </ul>
+        </p>
+        <h3>Prompt de spécialisation</h3>
+        <p>10 question niveau débutant sur les variables, déclarations de variables, portée des variables, concaténation, hoisting.</p>
+        <p>10 question niveau intermédiaire sur les variables, déclarations de variables, portée des variables, concaténation, hoisting.</p>
+        <p>10 question niveau avancée sur les variables, déclarations de variables, portée des variables, concaténation, hoisting.</p>
+        <p>10 question niveau expert sur les variables, déclarations de variables, portée des variables, concaténation, hoisting.</p>
+        <!-- penser à intégrer lien pour le copier/coller direct dans le presse-papier -->
+        <!-- penser à intégrer lien pour le quizz -->
+      </section>
+
+
+    </section>
+    <br>
+    <section id="boîtes">
+      <h1>2 - Demander / afficher des infos aux utilisateurs</h1>
+        <h2>Afficher info</h2>
+        <h2>Demander info</h2>
+        <h2>Demander confirmation</h2>
+        <h2>Demander des renseignements</h2>
+    </section>
+    <br>
+    <section id="fonctions">
+      <h1>3- Les fonctions</h1>
+        <h2>Qu'est-ce qu'une fonction</h2>
+        <h2>Paramètres</h2>
+        <h2>Types de fonctions</h2>
+        <h2>Paramètres par défaut</h2>
+        <h2>Fonctions déjà existantes</h2>
+    </section>
+    <br>
+    <section id="logique">
+      <h1>4 - La logique</h1>
+        <h2>If/else</h2>
+        <h2>Switch</h2>
+        <h2>Or/and</h2>
+        <h2>Not/bang operator</h2>
+        <h2>Conditions ternaires</h2>
+        <h2>Fonctions déjà existantes</h2>
+    </section>
+    <br>
+    <section id="mémoire">
+      <h1>5 - Emplacements de mémoire</h1>
+        <h2>Heap</h2>
+        <p>Espace de mémoire principal ou les objets, tableau et structures JS sont stockés</p>
+        <h2>Stack</h2>
+        <p>Stocke les variables locales et les références de fonction</p>
+        <h2>Or/and</h2>
+
+    </section>
+
+  </main>
+
+  <script src = "javascript.js"></script>
+</body>
+</html>
