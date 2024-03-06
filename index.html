@@ -8,23 +8,35 @@
 </head>
 <body>
   <header>
-    <h1>site mémo Javascript</h1>
+    <h1 class="header-title"><a href="#">site mémo JS</a></h1>
+    <a href="#" class="btn-back-to-top">Mystery button</a>
   </header>
   <nav>
-    <ul>
+    <ol>
         <li><a href="#variables">Variables et opérateurs</a></li>
         <li><a href="#boîtes">Boîtes</a></li>
         <li><a href="#fonctions">Fonctions</a></li>
         <li><a href="#logique">La logique</a></li>
+        <li><a href="#boucles">Les boucles </a></li>
         <li><a href="#mémoire">Emplacements de mémoire</a></li>
-        <li><a href="#tableaux">Les tableaux</a></li>
-    </ul>
+        <li><a href="#tableaux">Tableaux</a></li>
+        <li><a href="#objets">Objets JS</a></li>
+        <li><a href="#BOM">BOM (Browser Oriented Model)</a></li>
+        <li><a href="#DOM">BOM (Document Oriented Model)</a></li>
+        <li><a href="#évènements">Evénements</a></li>
+        <li><a href="#POO">POO</a></li>
+        <li><a href="#date">Date</a></li>
+        <li><a href="#API">API</a></li>
+        <li><a href="#asynchrone">Asynchrone</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#inclassables">Inclassables</a></li>
+    </ol>
   </nav>
 
   <main>
 
     <section id="variables">
-      <h1>1 - Les variables et les opérateurs</h1>
+      <h1>Les variables et les opérateurs</h1>
       <section id="cours">
         <h1>Cours </h1>
 
@@ -86,7 +98,7 @@
     </section>
     <br>
     <section id="boîtes">
-      <h1>2 - Demander / afficher des infos aux utilisateurs</h1>
+      <h1>Demander / afficher des infos aux utilisateurs</h1>
         <h2>Afficher info</h2>
         <h2>Demander info</h2>
         <h2>Demander confirmation</h2>
@@ -94,10 +106,14 @@
     </section>
     <br>
     <section id="fonctions">
-      <h1>3- Les fonctions</h1>
+      <h1>Les fonctions</h1>
         <h2>Qu'est-ce qu'une fonction</h2>
         <h2>Paramètres</h2>
         <h2>Types de fonctions</h2>
+        <p>fonctions standard</p>
+        <p>fonctions anonymes</p>
+        <p>fonctions fléchées</p>
+        <p>fonction pures</p>
         <h2>Paramètres par défaut</h2>
         <h2>Fonctions déjà existantes</h2>
         <h2>Recursivité</h2>
@@ -110,11 +126,20 @@
         <h2>Or/and</h2>
         <h2>Not/bang operator</h2>
         <h2>Conditions ternaires</h2>
-        <h2>Fonctions déjà existantes</h2>
+    </section>
+    <br>
+    <section id="boucles">
+      <h1>5 - Les boucles</h1>
+        <h2>While</h2>
+        <h2>Do...while</h2>
+        <h2>Boucle for</h2>
+        <h2>Autres boucles</h2>
+        <h2>Break</h2>
+        <h2>Les exceptions</h2>
     </section>
     <br>
     <section id="mémoire">
-      <h1>5 - Emplacements de mémoire</h1>
+      <h1>Emplacements de mémoire</h1>
         <h2>Heap</h2>
         <p>Espace de mémoire principal ou les objets, tableau et structures JS sont stockés</p>
         <h2>Stack</h2>
@@ -122,23 +147,133 @@
         <h2>Or/and</h2>
     </section>
     <br>
-    <section id="Tableaux">
-      <h1>6 - Les tableaux</h1>
-        <h2>Tableau simple</h2>
-        <p>...</p>
-        <h2>Tableau à plusieurs dimensions</h2>
-        <p>...</p>
-        <h2>Tableau associatif</h2>
-        <p>...</p>
-        <h2>Accèder à un élément index/length</h2>
-        <p>...</p>
-        <h2>Accèder à un élément push/unshift</h2>
-        <p>...</p>
-        <h2>Retirer un élément pop/shift</h2>
-        <p>...</p>
-        <h2>Retrouver un élement grâce à sa valeur</h2>
-        <p>...</p>
+    <section id="tableaux">
+      <h1>Les tableaux</h1>
+      <h2>Tableau simple</h2>
+      <p>...</p>
+      <h2>Tableau à plusieurs dimensions</h2>
+      <p>...</p>
+      <h2>Tableau associatif</h2>
+      <p>...</p>
+      <h2>Accèder à un élément index/length</h2>
+      <p>...</p>
+      <h2>Accèder à un élément push/unshift</h2>
+      <p>...</p>
+      <h2>Retirer un élément pop/shift</h2>
+      <p>...</p>
+      <h2>Retrouver un élement grâce à sa valeur</h2>
+      <p>...</p>
+      <h2>Concaténer pour afficher(join)</h2>
+      <h2>Splice : ajouter/remplacer/supprimer</h2>
+      <h2>Les boulces (for...in)</h2>
+      <h2>Les boucle (for...of)</h2>
+      <h2>Les boucles (foreach) </h2>
+      <h2>Concaténer un tableau associatif</h2>
     </section>
+    <br>
+    <section id="objets">
+      <h1>Objets JS</h1>
+        <h2>Créer un objet</h2>
+        <p>...</p>
+        <h2>Le destructuring / affectation par décomposition </h2>
+        <p>...</p>
+        <h2>Objet Set</h2>
+        <h2>Objet Map</h2>
+        <h2>Objet WeakSet</h2>
+        <h2>Objet WeakMap</h2>
+        <h2>REST parameter / nombre infini d'arguments</h2>
+        <h2>Spred operator / opérateur de décomposition</h2>
+    </section>
+    <br>
+    <section id="BOM">
+      <h1>BOM (Brower Oriented Model)</h1>
+        <h2>Définition</h2>
+        <h2>Window</h2>
+        <h2>Navigator</h2>
+        <h2>History</h2>
+        <h2>Location</h2>
+        <h2>Screen</h2>
+        <h2>Document</h2>
+    </section>
+    <br>
+    <section id="DOM">
+      <h1>DOM (Document Oriented Model)</h1>
+        <h2>Accéder aux élément du DOM</h2>
+        <h2>Modifier des éléments</h2>
+        <p>textContent</p>
+        <p>InnerHTML</p>
+        <h2>Ajouter des éléments</h2>
+        <p>append</p>
+        <p>prepend</p>
+        <p>insertBefore</p>
+        <h2>Supprimer des éléments</h2>
+        <h2>Modifier style des éléments</h2>
+    </section>
+    <br>
+    <section id="évènements">
+      <h1>Evènements</h1>
+        <h2>Définition</h2>
+        <h2>Les écouteurs</h2>
+        <h2>Propagation</h2>
+        <h2>Planifier un script</h2>
+        <p>setTimeout</p>
+        <p>setInterval</p>
+    </section>
+    <br>
+    <section id="POO">
+      <h1>POO</h1>
+        <h2>Définition</h2>
+        <h2>Objet littéral</h2>
+        <h2>Constructeur</h2>
+        <h2>Prototypes</h2>
+        <h2>Créer objet</h2>
+        <h2>Héritage</h2>
+        <h2>Bind, Call et Apply</h2>
+        <h2>Créer objet avec constructeur</h2>
+        <h2>Getter et Setter</h2>
+    </section>
+    <br>
+    <section id="date">
+      <h1>Date</h1>
+        <h2>Objet Date</h2>
+        <h2>Getter/setter avec Date</h2>
+        <h2>Transformer date</h2>
+    </section>
+    <br>
+    <section id="api">
+      <h1>API</h1>
+        <h2>Définition</h2>
+        <h2>AJAX</h2>
+        <h2>XMLHttpRequest</h2>
+        <p>get</p>
+        <p>send</p>
+    </section>
+    <br>
+    <section id="asynchrone">
+      <h1>Asynchrone</h1>
+        <h2>Définition</h2>
+        <h2>Promesses</h2>
+        <h2>Async et Await</h2>
+        <h2>Callback</h2>
+        <h2>Fetch & axios</h2>
+        <p>Get avec fetch & axios</p>
+        <p>Send avec fetch & axios</p>
+    </section>
+    <br>
+    <section id="cookies">
+      <h1>Cookies</h1>
+      <h2>LocalStorage / SessionStorage</h2>
+    </section>
+    <br>
+    <section id="inclassables">
+      <h1>Inclassables</h1>
+      <h2>Géolocalisation</h2>
+      <h2>Modules</h2>
+      <p>Import</p>
+      <p>Export</p>
+      <p>Mode strict</p>
+    </section>
+    <br>
 
   </main>
 
