@@ -32,6 +32,7 @@ h3 {
 
 p {
   color: blanchedalmond;
+  font-size: 16px;
   font-family: 'figtree';
 }
 
@@ -49,6 +50,8 @@ header {
 .header-title {
   margin: 0; /* Supprime les marges par défaut */
   font-family: 'Figtree', sans-serif;
+  text-shadow: 0px 2px 1px #085F63;
+  display: inline-block;
 }
 
 .btn-back-to-top {
@@ -64,6 +67,7 @@ header {
   cursor: pointer;
   padding: 15px;
   border-radius: 2px;
+  border-bottom: 4px solid #085F63;
 }
 
 .btn-back-to-top:hover {
@@ -72,4 +76,7 @@ header {
 
 nav {
   margin-top: 100px;
+  font-family: 'figtree';
+  font-size: 1em; /* Taille relative pour h2 */
+  color:antiquewhite;
 }
