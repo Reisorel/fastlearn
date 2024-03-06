@@ -13,8 +13,18 @@ body {
 
 h1 {
   font-family: 'figtree';
-  font-size: 2em; /* Taille maximale de la police pour h1 */
+  font-size: 2em;
   color:antiquewhite;
+  background-color:#EF255F;
+  display: inline-block;
+}
+
+h1.header-title {
+    text-shadow: 2px 2px 0px #085F63;
+    margin: 0; /* Supprime les marges par défaut */
+    font-family: 'Figtree', sans-serif;
+    background-color: transparent;
+    display: inline-block;
 }
 
 h2 {
@@ -47,13 +57,6 @@ header {
   padding: 20px;
 }
 
-.header-title {
-  margin: 0; /* Supprime les marges par défaut */
-  font-family: 'Figtree', sans-serif;
-  text-shadow: 0px 2px 1px #085F63;
-  display: inline-block;
-}
-
 .btn-back-to-top {
   font-family: 'figtree';
   position: fixed;
@@ -79,4 +82,9 @@ nav {
   font-family: 'figtree';
   font-size: 1em; /* Taille relative pour h2 */
   color:antiquewhite;
+}
+
+section {
+  margin-top: auto;
+  padding: auto;
 }
