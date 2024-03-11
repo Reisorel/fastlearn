@@ -30,7 +30,8 @@ h1.header-title {
 h2 {
   font-family: 'figtree';
   font-size: 1.5em; /* Taille relative pour h2 */
-  color:antiquewhite;
+  color: antiquewhite;
+  font-weight: bold;  /* Met en gras le texte dans les balises h2 */
 }
 
 h3 {
@@ -44,6 +45,10 @@ p {
   color: blanchedalmond;
   font-size: 16px;
   font-family: 'figtree';
+}
+
+pre {
+  display: flex;
 }
 
 header {

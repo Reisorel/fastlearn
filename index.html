@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site mémo JS !</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/tomorrow-night-blue.min.css">
+
 </head>
+
 <body>
   <header>
     <h1 class="header-title"><a href="#">Site mémo JS !</a></h1>
@@ -13,23 +17,23 @@
   </header>
   <nav>
     <ol>
-        <li><a href="#variables">Variables et opérateurs</a></li>
-        <li><a href="#boîtes">Boîtes</a></li>
-        <li><a href="#fonctions">Fonctions</a></li>
-        <li><a href="#logique">La logique</a></li>
-        <li><a href="#boucles">Les boucles </a></li>
-        <li><a href="#mémoire">Emplacements de mémoire</a></li>
-        <li><a href="#tableaux">Tableaux</a></li>
-        <li><a href="#objets">Objets JS</a></li>
-        <li><a href="#BOM">BOM (Browser Oriented Model)</a></li>
-        <li><a href="#DOM">BOM (Document Oriented Model)</a></li>
-        <li><a href="#évènements">Evénements</a></li>
-        <li><a href="#POO">POO</a></li>
-        <li><a href="#date">Date</a></li>
-        <li><a href="#API">API</a></li>
-        <li><a href="#asynchrone">Asynchrone</a></li>
-        <li><a href="#cookies">Cookies</a></li>
-        <li><a href="#inclassables">Inclassables</a></li>
+      <li><a href="#variables">Variables et opérateurs</a></li>
+      <li><a href="#boîtes">Boîtes</a></li>
+      <li><a href="#fonctions">Fonctions</a></li>
+      <li><a href="#logique">La logique</a></li>
+      <li><a href="#boucles">Les boucles </a></li>
+      <li><a href="#mémoire">Emplacements de mémoire</a></li>
+      <li><a href="#tableaux">Tableaux</a></li>
+      <li><a href="#objets">Objets JS</a></li>
+      <li><a href="#BOM">BOM (Browser Oriented Model)</a></li>
+      <li><a href="#DOM">BOM (Document Oriented Model)</a></li>
+      <li><a href="#évènements">Evénements</a></li>
+      <li><a href="#POO">POO</a></li>
+      <li><a href="#date">Date</a></li>
+      <li><a href="#API">API</a></li>
+      <li><a href="#asynchrone">Asynchrone</a></li>
+      <li><a href="#cookies">Cookies</a></li>
+      <li><a href="#inclassables">Inclassables</a></li>
     </ol>
   </nav>
 
@@ -55,17 +59,33 @@
 
         <h2>Le Hoisting</h2>
         <p>toutes les variables se font hisser dans un objet "variable object"</p>
-        <p>Une variable var se fait hoisted et peut être utilisée avant sa déclaration, car elle est initialisée à undefined.
+        <p>Une variable var se fait hoisted et peut être utilisée avant sa déclaration, car elle est initialisée à
+          undefined.
           Let & const sont hoisted mais pas initialisées.</p>
-        <p>Les déclarations de fonctions et de variables sont hissées en JavaScript. ELles sont stockées dans la mémoire du VO(Variables Object)
-          du contexte d'exécution actuel et rendues disponibles dans le contexte d'exécution avant même que l'exécution du code ne commence.
+        <p>Les déclarations de fonctions et de variables sont hissées en JavaScript. ELles sont stockées dans la mémoire
+          du VO(Variables Object)
+          du contexte d'exécution actuel et rendues disponibles dans le contexte d'exécution avant même que l'exécution
+          du code ne commence.
           Seule la délcaration est hissée, pas sa valeur.
+          <pre style="tab-size: 2;">
+            <code>
+  console.log(x); // undefined
+  var x = 5;
+  console.log(x); // 5
+            </code>
+          </pre>
         </p>
         <h2>Template littéral</h2>
+        <pre style="tab-size: 2;">
+          <code>
+  console.log(`backticks et dollar pour ${variable} et ${fonctions()}`);
+          </code>
+        </pre>
 
         <h2>les Closures</h2>
         <p>closure est une fonction interne qui a accès aux variables de son scope parent, même après que la fonction
-          parent ait été exécutée et que son scope soit théoriquement "fermé". Cela permet à la fonction interne de conserver
+          parent ait été exécutée et que son scope soit théoriquement "fermé". Cela permet à la fonction interne de
+          conserver
           et d'utiliser les valeurs des variables externes même après la fin de l'exécution de la fonction parent.
 
         </p>
@@ -73,25 +93,29 @@
 
       <div id="questions">
         <h1>Questions </h1>
-
-        <h2>Prompt de révion pour les variables et les opérateurs</h2>
+        <h2></h2><a href="quiz_js.html">lien quizz variables</a></h2>
+        <h2>Prompt de révion chatGPT pour les variables et les opérateurs</h2>
 
         <h3>prompt d'initialisation</h3>
 
         <p>Créer moi un quizz de 10 questions auquelles je dois réponde au fur et à mesure que tu me les poses.
-        Modèle : Question 1 -> ma réponse -> analyse de la réponse / 1 point -> question 2 ect..
-          <ul>4 niveaux de question vont-être proposés.
-            <li>Niveau 1 : débutant</li>
-            <li>Niveau 2 : intermédiaire</li>
-            <li>Niveau 3 : avancé</li>
-            <li>Niveau 4 : expert</li>
-          </ul>
+          Modèle : Question 1 -> ma réponse -> analyse de la réponse / 1 point -> question 2 ect..
+        <ul>4 niveaux de question vont-être proposés.
+          <li>Niveau 1 : débutant</li>
+          <li>Niveau 2 : intermédiaire</li>
+          <li>Niveau 3 : avancé</li>
+          <li>Niveau 4 : expert</li>
+        </ul>
         </p>
         <h3>Prompt de spécialisation</h3>
-        <p>10 question niveau débutant sur les variables, déclarations de variables, portée des variables, concaténation, hoisting.</p>
-        <p>10 question niveau intermédiaire sur les variables, déclarations de variables, portée des variables, concaténation, template littéral, hoisting.</p>
-        <p>10 question niveau avancé sur les variables, déclarations de variables, portée des variables, concaténation, template littéral, hoisting.</p>
-        <p>10 question niveau expert sur les variables, déclarations de variables, portée des variables, concaténation, template littéral, hoisting.</p>
+        <p>10 question niveau débutant sur les variables, déclarations de variables, portée des variables,
+          concaténation, hoisting.</p>
+        <p>10 question niveau intermédiaire sur les variables, déclarations de variables, portée des variables,
+          concaténation, template littéral, hoisting.</p>
+        <p>10 question niveau avancé sur les variables, déclarations de variables, portée des variables, concaténation,
+          template littéral, hoisting.</p>
+        <p>10 question niveau expert sur les variables, déclarations de variables, portée des variables, concaténation,
+          template littéral, hoisting.</p>
         <!-- penser à intégrer lien pour le copier/coller direct dans le presse-papier -->
         <!-- penser à intégrer lien pour le quizz -->
       </div>
@@ -102,53 +126,55 @@
     <br>
     <section id="boîtes">
       <h1>Demander / afficher des infos aux utilisateurs</h1>
-        <h2>Afficher info</h2>
-        <h2>Demander info</h2>
-        <h2>Demander confirmation</h2>
-        <h2>Demander des renseignements</h2>
+      <h2>Afficher info</h2>
+      <h2>Demander info</h2>
+      <h2>Demander confirmation</h2>
+      <h2>Demander des renseignements</h2>
     </section>
     <br>
     <section id="fonctions">
       <h1>Les fonctions</h1>
-        <h2>Qu'est-ce qu'une fonction</h2>
-        <h2>Paramètres</h2>
-        <h2>Types de fonctions</h2>
-        <p>fonctions standard</p>
-        <p>fonctions anonymes</p>
-        <p>fonctions fléchées</p>
-        <p>fonction pures</p>
-        <h2>Paramètres par défaut</h2>
-        <h2>Fonctions déjà existantes</h2>
-        <h2>Recursivité</h2>
+      <h2>Qu'est-ce qu'une fonction</h2>
+      <h2>Paramètres</h2>
+      <h2>Types de fonctions</h2>
+      <p>fonctions standard</p>
+      
+      <p>fonctions anonymes</p>
+      <p>fonctions fléchées</p>
+      <p>fonction pures</p>
+      <h2>Paramètres par défaut</h2>
+      <h2>Fonctions déjà existantes</h2>
+      <h2>Recursivité</h2>
     </section>
     <br>
     <section id="logique">
       <h1>4 - La logique</h1>
-        <h2>If/else</h2>
-        <h2>Switch</h2>
-        <h2>Or/and</h2>
-        <h2>Not/bang operator</h2>
-        <h2>Conditions ternaires</h2>
+      <h2>If/else</h2>
+      <h2>Switch</h2>
+      <h2>Or/and</h2>
+      <h2>Not/bang operator</h2>
+      <h2>Conditions ternaires</h2>
     </section>
     <br>
     <section id="boucles">
       <h1>5 - Les boucles</h1>
-        <h2>While</h2>
-        <h2>Do...while</h2>
-        <h2>Boucle for</h2>
-        <h2>Autres boucles</h2>
-        <h2>Break</h2>
-        <h2>Les exceptions</h2>
+      <h2>While</h2>
+      <h2>Do...while</h2>
+      <h2>Boucle for</h2>
+      <h2>Autres boucles</h2>
+      <h2>Break</h2>
+      <h2>Les exceptions</h2>
     </section>
     <br>
     <section id="mémoire">
       <h1>Emplacements de mémoire</h1>
-        <h2>Heap</h2>
-        <p>Espace de mémoire principal ou les objets, tableau et structures JS sont stockés</p>
-        <h2>Stack</h2>
-        <p>Stocke les variables locales et les références de fonction</p>
-        <h2>Contexte d'éxecution</h2>
-        <p>Global : quand le script se fait analyser / toutes les déclations de fonctions et de variables y sont hissées </p>
+      <h2>Heap</h2>
+      <p>Espace de mémoire principal ou les objets, tableau et structures JS sont stockés</p>
+      <h2>Stack</h2>
+      <p>Stocke les variables locales et les références de fonction</p>
+      <h2>Contexte d'éxecution</h2>
+      <p>Global : quand le script se fait analyser / toutes les déclations de fonctions et de variables y sont hissées
+      </p>
     </section>
     <br>
     <section id="tableaux">
@@ -177,91 +203,124 @@
     <br>
     <section id="objets">
       <h1>Objets JS</h1>
-        <h2>Créer un objet</h2>
-        <p>...</p>
-        <h2>Le destructuring / affectation par décomposition </h2>
-        <p>...</p>
-        <h2>Objet Set</h2>
-        <h2>Objet Map</h2>
-        <h2>Objet WeakSet</h2>
-        <h2>Objet WeakMap</h2>
-        <h2>REST parameter / nombre infini d'arguments</h2>
-        <h2>Spred operator / opérateur de décomposition</h2>
+      <h2>Créer un objet</h2>
+      <p>...</p>
+      <h2>Le destructuring / affectation par décomposition </h2>
+      <p>Destructuring / unpack : extraitee des données d'un tableau ou d'un objet grâce à une syntaxe dont la forme
+        ressemble à la structure du tableau ou de l'objet.</p>
+      <h2>Objet Set</h2>
+      <h2>Objet Map</h2>
+      <h2>Objet WeakSet</h2>
+      <h2>Objet WeakMap</h2>
+      <h2>REST parameter / nombre infini d'arguments</h2>
+      <h2>Spred operator / opérateur de décomposition</h2>
     </section>
     <br>
     <section id="BOM">
       <h1>BOM (Brower Oriented Model)</h1>
-        <h2>Définition</h2>
-        <h2>Window</h2>
-        <h2>Navigator</h2>
-        <h2>History</h2>
-        <h2>Location</h2>
-        <h2>Screen</h2>
-        <h2>Document</h2>
+      <h2>Définition</h2>
+      <h2>Window</h2>
+      <h2>Navigator</h2>
+      <h2>History</h2>
+      <h2>Location</h2>
+      <h2>Screen</h2>
+      <h2>Document</h2>
     </section>
     <br>
     <section id="DOM">
       <h1>DOM (Document Oriented Model)</h1>
-        <h2>Accéder aux élément du DOM</h2>
-        <h2>Modifier des éléments</h2>
-        <p>textContent</p>
-        <p>InnerHTML</p>
-        <h2>Ajouter des éléments</h2>
-        <p>append</p>
-        <p>prepend</p>
-        <p>insertBefore</p>
-        <h2>Supprimer des éléments</h2>
-        <h2>Modifier style des éléments</h2>
+      <h2>Accéder aux élément du DOM</h2>
+      <p>
+      <ul>
+        <li>getElementsByTagName() - Sélectionne tous les éléments avec la balise entre parenthèses</li>
+        <li>getElementById() - Sélectionne un seul élément : le premier ayant l'ID entre parenthèses</li>
+        <li>getElementsByClassName() - Sélectionne tous les éléments avec la classe entre parenthèses</li>
+        <li>querySelector() - Sélectionne un seul élément : celui avec le sélecteur entre parenthèses</li>
+        <li>querySelectorAll() - Sélectionne tous les éléments avec le sélecteur entre parenthèses</li>
+      </ul>
+      </p>
+      <h2>Modifier des éléments</h2>
+      <p>textContent : Modifie le texte d'un élément
+      </p>
+      <p>InnerHTML : Modifie l'HTML d'un élément</p>
+      <h2>Ajouter des éléments</h2>
+      <p>
+      <ul>
+        <li>createElement() - Crée un élément</li>
+        <li>prepend() - Ajoute l'élément entre parenthèses devant l'élément cible</li>
+        <li>append() - Ajouter l'élément entre parenthèses derrière l'élément cible (peut contenir du texte)</li>
+        <li>appendChild() - Ajouter l'élément entre parenthèses derrière l'élément cible (ne peut pas contenir du texte)
+        </li>
+        <li>insertBefore() - Insère un élément avant l'élément cible</li>
+      </ul>
+      </p>
+      <h2>Supprimer des éléments</h2>
+      <h2>Modifier style des éléments</h2>
     </section>
     <br>
     <section id="évènements">
       <h1>Evènements</h1>
-        <h2>Définition</h2>
-        <h2>Les écouteurs</h2>
-        <h2>Propagation</h2>
-        <h2>Planifier un script</h2>
-        <p>setTimeout</p>
-        <p>setInterval</p>
+      <h2>Définition</h2>
+      <h2>Les écouteurs</h2>
+      <h2>Propagation</h2>
+      <h2>Planifier un script</h2>
+      <p>setTimeout</p>
+      <p>setInterval</p>
     </section>
     <br>
     <section id="POO">
       <h1>POO</h1>
-        <h2>Définition</h2>
-        <h2>Objet littéral</h2>
-        <h2>Constructeur</h2>
-        <h2>Prototypes</h2>
-        <h2>Créer objet</h2>
-        <h2>Héritage</h2>
-        <h2>Bind, Call et Apply</h2>
-        <h2>Créer objet avec constructeur</h2>
-        <h2>Getter et Setter</h2>
+      <h2>Définition</h2>
+      <h2>Objet littéral</h2>
+      <h2>Constructeur</h2>
+      <h2>Prototypes</h2>
+      <h2>Créer objet</h2>
+      <h2>Héritage</h2>
+      <h2>Bind, Call et Apply</h2>
+      <h2>Créer objet avec constructeur</h2>
+      <h2>Getter et Setter</h2>
     </section>
     <br>
     <section id="date">
       <h1>Date</h1>
-        <h2>Objet Date</h2>
-        <h2>Getter/setter avec Date</h2>
-        <h2>Transformer date</h2>
+      <h2>Objet Date</h2>
+      <h2>Getter/setter avec Date</h2>
+      <h2>Transformer date</h2>
     </section>
     <br>
     <section id="api">
       <h1>API</h1>
-        <h2>Définition</h2>
-        <h2>AJAX</h2>
-        <h2>XMLHttpRequest</h2>
-        <p>get</p>
-        <p>send</p>
+      <h2>Définition</h2>
+      <h2>AJAX</h2>
+      <h2>XMLHttpRequest</h2>
+      <p>get</p>
+      <p>send</p>
     </section>
     <br>
     <section id="asynchrone">
       <h1>Asynchrone</h1>
-        <h2>Définition</h2>
-        <h2>Promesses</h2>
-        <h2>Async et Await</h2>
-        <h2>Callback</h2>
-        <h2>Fetch & axios</h2>
-        <p>Get avec fetch & axios</p>
-        <p>Send avec fetch & axios</p>
+      <h2>Définition</h2>
+      <h2>Promesses</h2>
+      <p>Objet représentant l'achèvement ou l'échec éventuel d'une opération asynchrone.
+        3 était : en attente (pending), résolue (fulfilled) ou rejetée (rejected).
+        Une promesse est créée avec le constructeur Promise, et elle expose une méthode then pour réagir lorsque la
+        promesse est résolue,
+        et une méthode catch pour gérer les erreurs lorsqu'elle est rejetée.
+      </p>
+      <h2>Async et Await</h2>
+      <h2>Callback</h2>
+      <p>fonction qui est passée comme argument à une autre fonction et qui est ensuite invoquée à un moment ultérieur
+        dans l'exécution de cette fonction parente,
+        généralement en réponse à un événement ou à une condition spécifique.</p>
+      <h2>Fetch & axios</h2>
+      <p>Get / avec fetch</p>
+      <p>Get / send avec Axios</p>
+      <p>bibliothèque JavaScript qui simplifie l'envoi de requêtes HTTP à partir du navigateur ou de Node.js. Elle
+        utilise les Promesses pour gérer les requêtes asynchrones
+        et facilite la communication avec des serveurs web via les protocoles HTTP et HTTPS. Axios est largement
+        utilisée dans le développement web moderne pour effectuer des
+        requêtes AJAX de manière simple et efficace, en offrant une interface fluide pour envoyer et recevoir des
+        données depuis et vers des serveurs web.</p>
     </section>
     <br>
     <section id="cookies">
@@ -280,7 +339,11 @@
     <br>
 
   </main>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
   <script src="javascript.js"></script>
 </body>
+
 </html>
