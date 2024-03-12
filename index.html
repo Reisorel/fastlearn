@@ -137,14 +137,40 @@
       <h2>Qu'est-ce qu'une fonction</h2>
       <h2>Paramètres</h2>
       <h2>Types de fonctions</h2>
-      <p>fonctions standard</p>
-      
-      <p>fonctions anonymes</p>
-      <p>fonctions fléchées</p>
-      <p>fonction pures</p>
-      <h2>Paramètres par défaut</h2>
-      <h2>Fonctions déjà existantes</h2>
-      <h2>Recursivité</h2>
+      <h3>fonctions classique</h3>
+        <pre style="tab-size: 2;">
+          <code>
+  function standardFunction(x, y) {
+    return x + y;
+}
+          </code>
+        </pre>
+      <p>Les fonctions classiquent créent un "this", sorte de variable disponible dans le conteste de la fonction.</p>
+      <h3>fonctions nommées</h3>
+        <pre style="tab-size: 2;">
+          <code>
+  function namedFunction(x, y) {
+    return x * y;
+}
+          </code>
+        </pre>
+      <h3>fonctions anonymes</h3>
+      <pre style="tab-size: 2;">
+        <code>
+  let anonymousFunction = function() {
+    console.log("Je suis une fonction anonyme !");
+};
+       </code>
+      </pre>
+      <h3>fonctions fléchées</h3>
+      <p>Les fonctions fléchées n'utilisent pas this, mais peuvent lire le this d'une fonction classique si elles se situent dedans.
+        Elles lisent le .this du contexte global de la fonction (window).
+      </p>
+      <h3>fonctions d'ordre supérieur</h3>
+      <h3>Expression de fonction</h3>
+      <h3>Paramètres par défaut</h3>
+      <h3>Fonctions déjà existantes</h3>
+      <h3>Recursivité</h3>
     </section>
     <br>
     <section id="logique">
@@ -213,7 +239,8 @@
       <h2>Objet WeakSet</h2>
       <h2>Objet WeakMap</h2>
       <h2>REST parameter / nombre infini d'arguments</h2>
-      <h2>Spred operator / opérateur de décomposition</h2>
+      <h2>Spred operator / syntaxe de décomposition</h2>
+      <p></p>
     </section>
     <br>
     <section id="BOM">
