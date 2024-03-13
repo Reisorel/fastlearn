@@ -144,7 +144,7 @@
     return x + y;
 }
           </code>
-        </pre>
+        </pre >
       <p>Les fonctions classiquent créent un "this", sorte de variable disponible dans le conteste de la fonction.</p>
       <h3>fonctions nommées</h3>
         <pre style="tab-size: 2;">
@@ -232,15 +232,43 @@
       <h2>Créer un objet</h2>
       <p>...</p>
       <h2>Le destructuring / affectation par décomposition </h2>
-      <p>Destructuring / unpack : extraitee des données d'un tableau ou d'un objet grâce à une syntaxe dont la forme
-        ressemble à la structure du tableau ou de l'objet.</p>
+      <p>consiste à créer des variables à partir des propriétés d'un objet ou des éléments d'un tableau.</p>
       <h2>Objet Set</h2>
       <h2>Objet Map</h2>
       <h2>Objet WeakSet</h2>
       <h2>Objet WeakMap</h2>
       <h2>REST parameter / nombre infini d'arguments</h2>
       <h2>Spred operator / syntaxe de décomposition</h2>
-      <p></p>
+      <p>Permet de copier les valeurs d'un élément itérable (tableau, chaîne, objet...).
+        pratique pour effecteur une copipe superficielle / afficher une liste. Les objets sont des valeurs de référence,
+        pas des primitives. Copie d'un objet = copie d'un emplacement de mémoire de celui-ci (shallow copie)
+        <pre style="tab-size: 2;">
+          <code>
+const array = [1,2,3,]
+console.log(...array)
+// Affiche tous les éléments de array
+
+const shallowArrayCopy = [...array, 4,56]
+console.log(shallowArrayCopy)
+// Affiche 1,2,3,4,5,6 (les numbers sont des primitives donc sont copiés en tant que tel )
+
+const array = [1,2,3,{a:5}]
+const shallowArrayCopy = [...array, 4, 5, 6]
+array[3].a = 555
+// On change la valeur de l'objet {a:5} qui ezt ici copié en tant que valeur de référence.
+// Les objets sont des valeurs de référence et non pas des primitives.
+
+const obj = {
+  name: Eric,
+  age: 52
+}
+
+const shallowObjectCopy = {...obj, work: "Magneto"}
+// Fonctionne également avec les objets.
+          </code>
+        </pre >
+
+      </p>
     </section>
     <br>
     <section id="BOM">
