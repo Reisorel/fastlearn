@@ -172,41 +172,49 @@ Valeurs de la copie après modification :
         </pre>
 
         <h2>les Closures</h2>
-        <p>
-          closure est une fonction interne qui a accès aux variables de son scope parent, même après que la fonction
-          parent ait été exécutée et que son scope soit théoriquement "fermé". Cela permet à la fonction interne de
-          conserver
-          et d'utiliser les valeurs des variables externes même après la fin de l'exécution de la fonction parent.
-        </p>
+        <ul>
+          <li>
+            Fonction interne qui a accès aux variables de son scope parent, même après que la fonction
+            parent ait été exécutée et que son scope soit théoriquement "fermé".
+          </li>
+          <li>
+            Cela permet à la fonction interne de conserver et d'utiliser les valeurs des variables externes même après
+            la fin de l'exécution de la fonction parent.
+          </li>
+        </ul>
+        <pre>
+          <code>
+function creerCompteur() {
+  // Déclare une variable compteur et l'initialise à 0
+  let compteur = 0;
+
+  // Déclare une fonction interne incrementer
+  function incrementer() {
+      // Incrémente la variable compteur à chaque appel
+      compteur++;
+      // Affiche la valeur actuelle de compteur dans la console
+      console.log(compteur);
+  }
+
+  // Renvoie la fonction incrementer
+  return incrementer;
+}
+// Appelle creerCompteur et stocke la fonction retournée dans monCompteur
+// IMPORTANT, c'est cette assignation qui crée la closure,
+// Elle établit le lien entre l'environnement lexical de la fonction interne...
+//...et son utilisation en dehors de ce contexte."
+
+// Appelle la fonction stockée dans monCompteur (incrementer) plusieurs fois
+monCompteur(); // Affiche 1
+monCompteur(); // Affiche 2
+monCompteur(); // Affiche 3
+          </code>
+        </pre>
       </div>
 
       <div id="questions">
         <h1>Questions </h1>
-        <h2></h2><a href="quiz_js.html">lien quizz variables</a></h2>
-        <h2>Prompt de révion chatGPT pour les variables et les opérateurs</h2>
-
-        <h3>prompt d'initialisation</h3>
-
-        <p>Créer moi un quizz de 10 questions auquelles je dois réponde au fur et à mesure que tu me les poses.
-          Modèle : Question 1 -> ma réponse -> analyse de la réponse / 1 point -> question 2 ect..
-        <ul>4 niveaux de question vont-être proposés.
-          <li>Niveau 1 : débutant</li>
-          <li>Niveau 2 : intermédiaire</li>
-          <li>Niveau 3 : avancé</li>
-          <li>Niveau 4 : expert</li>
-        </ul>
-        </p>
-        <h3>Prompt de spécialisation</h3>
-        <p>10 question niveau débutant sur les variables, déclarations de variables, portée des variables,
-          concaténation, hoisting.</p>
-        <p>10 question niveau intermédiaire sur les variables, déclarations de variables, portée des variables,
-          concaténation, template littéral, hoisting.</p>
-        <p>10 question niveau avancé sur les variables, déclarations de variables, portée des variables, concaténation,
-          template littéral, hoisting.</p>
-        <p>10 question niveau expert sur les variables, déclarations de variables, portée des variables, concaténation,
-          template littéral, hoisting.</p>
-        <!-- penser à intégrer lien pour le copier/coller direct dans le presse-papier -->
-        <!-- penser à intégrer lien pour le quizz -->
+        <h2><a href="quiz_js.html">Lien quizz variables</a></h2>
       </div>
     </section>
 
@@ -415,19 +423,21 @@ console.log(welcoming());
       <h2>Splice : ajouter/remplacer/supprimer</h2>
       <h2>Les boulces (for...in)</h2>
       <h2>Les boucle (for...of)</h2>
-      <h2>Les boucles (foreach) </h2>
+      <h2>Méthode .forEeach</h2>
       <ul>
         <li>
-          Cette méthode prend en argument une fonction de rappel (callback) qui sera exécutée pour chaque élément du tableau.
+          Cette méthode prend en argument une fonction de rappel (callback) qui sera exécutée pour chaque élément du
+          tableau.
         </li>
         <li>
-          Le callback peut recevoir jusqu'à trois arguments : l'élément actuel, l'index de l'élément et le tableau sur lequel forEach() a été appelé.
+          Le callback peut recevoir jusqu'à trois arguments : l'élément actuel, l'index de l'élément et le tableau sur
+          lequel forEach() a été appelé.
         </li>
         <li>
-          Itère sur l'objet original contrairement à .map qui créer un nouvel objet. 
+          Itère sur l'objet original contrairement à .map qui créer un nouvel objet.
         </li>
       </ul>
-      <pre>
+      <pre style="tab-size: 2;">
         <code>
 const number = [1,2,3,4]
 numbers.forEach((num, index, array) => console.log(num))
@@ -436,6 +446,78 @@ numbers.forEach((num, index, array) => console.log(num))
 //2 1(4)[1,2,3,4]
 //3 2(4)[1,2,3,4]
 //4 3(4)[1,2,3,4]
+        </code>
+      </pre>
+      <h2>Méthode .map </h2>
+      <ul>
+        <li>
+          Permet d'itérer sur chaque élément d'un tableau et de créer un nouveau tableau à partir des résultats de
+          l'application d'une fonction sur chaque élément.
+        </li>
+      </ul>
+      <pre style="tab-size: 2;">
+        <code>
+      const people = [
+      {
+      name: "Pedro",
+      age: 25
+      },
+      {
+      name: "Sara",
+      age: 26
+      },
+      {
+      name: "Maria",
+      age: 27
+      }
+      ]
+
+      const names = people.map(people => people.name)
+      console.log(names)
+      //Affiche un nouvel array avec les clé "name"
+      //Array(3)
+      //0:"Pedro"
+      //1:"Sara"
+      //2:"Maria"
+      //length:3
+        </code>
+      </pre>
+      <h2>Méthode filter </h2>
+      <ul>
+        <li>
+          Crée un nouveau tableau contenant uniquement les éléments qui passent un test spécifié par une fonction de
+          rappel.
+        </li>
+        <li>
+          En d'autres termes, elle crée un nouveau tableau en filtrant les éléments du tableau d'origine selon un
+          critère défini par la fonction de rappel.
+        </li>
+      </ul>
+      <pre style="tab-size: 2;">
+        <code>
+const heights = [170,185,198,162,187,155,178,207,201,189]
+
+const lessThan180 = heights.filter(height => height < 180)
+console.log(lessThan180) // affiche [170, 162, 155, 178]
+        </code>
+      </pre>
+      <h2>Méthode reduce </h2>
+      <ul>
+        <li>
+          La méthode reduce() applique une fonction qui est un « accumulateur ».
+        </li>
+        <li>
+          Elle traite chaque valeur d'une liste (de la gauche vers la droite) afin de la réduire à une seule valeur.
+        </li>
+      </ul>
+      <pre style="tab-size: 2;">
+        <code>
+const marks = [18,5,17,12,20,16,14]
+
+const average = marks.reduce((acc, mark) => acc + mark, 0) / mark.length
+// Initialise à 0, puis itère 0+18, 18+5, 23+17, 40+12, ect...
+// Divise la somme par le nombre d'éléments pour obtenir une moyenne
+console.log(average)
         </code>
       </pre>
 
@@ -483,6 +565,7 @@ const numbers = {
       return numbers.num1 + numbers.num2
 }
 console.log(foo(numbers))
+
 
 function foo2({num1, num2}) {
   console.log(numbers)
