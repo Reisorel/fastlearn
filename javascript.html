@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site mémo JS !</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/tomorrow-night-blue.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/tomorrow-night-blue.min.css">
 
 </head>
 
@@ -17,6 +18,8 @@
   </header>
   <nav>
     <ol>
+
+      <li><a href="#typesdedonnees">Types de données</a></li>
       <li><a href="#variables">Variables et opérateurs</a></li>
       <li><a href="#boîtes">Boîtes</a></li>
       <li><a href="#fonctions">Fonctions</a></li>
@@ -38,6 +41,92 @@
   </nav>
 
   <main>
+    <section id="typesdedonnees">
+      <h1>Types de données</h1>
+      <div id="cours">
+        <h1>Cours</h1>
+        <h2>Primitives</h2>
+        <pre style="tab-size: 2;">
+          <code>
+// Nombre :
+42, 3.14
+// Chaîne de caractères (String) :
+"Hello, World!"
+//Booléen :
+true, false
+// Null :
+null
+//Undefined :
+undefined
+//Symbol :
+Symbol('foo')
+//Big int :
+const monBigInt = BigInt(12345678901234567890);
+          </code>
+        </pre>
+
+        <h2>Objets</h2>
+        <pre style="tab-size: 2;">
+          <code>
+// Objet
+{ nom: "John", âge: 30 }
+// Fonction
+function additionner(a, b) { return a + b; }
+//Date :
+new Date()
+//Expression régulière (RegExp) :
+/[a-z]+/
+//Erreur :
+new Error('Une erreur est survenue')
+          </code>
+        </pre style="tab-size: 2;">
+        <h2>Copie partielle / profonde</h2>
+        <p>
+          Duplication de données où seules les références aux emplacements de mémoire des objets sont copiées, plutôt
+          que les objets eux-mêmes. Les nouvelles variables pointent vers les mêmes objets en mémoire
+          que les variables originales, entraînant des modifications répercutées sur l'objet original en cas de
+          modification de la copie partielle.
+          </br>
+          Cela ne s'applique pas aux types de données primitifs, car ils sont immuables, ce qui signifie que leur valeur
+          ne peut pas être modifiée une fois qu'ils sont créés.
+        </p>
+        <pre>
+          <code>
+// Création de l'objet original
+let personnageOriginal = {
+    nom: "Ezio",
+    niveau: 50,
+    pointsDeVie: 100
+};
+
+// Copie partielle de l'objet
+let copiePartielle = personnageOriginal;
+
+// Modification de la copie
+copiePartielle.pointsDeVie = 80;
+
+// Affichage des valeurs originales
+console.log("Valeurs originales :");
+console.log(personnageOriginal);
+
+// Affichage des valeurs de la copie
+console.log("Valeurs de la copie après modification :");
+console.log(copiePartielle);
+          </code>
+        </pre>
+        <p>Aperçu de l'output du console.log</p>
+        <pre>
+          <code style="tab-size: 2;">
+Valeurs originales :
+{ nom: 'Ezio', niveau: 50, pointsDeVie: 80 }
+Valeurs de la copie après modification :
+{ nom: 'Ezio', niveau: 50, pointsDeVie: 80 }
+          </code>
+        </pre>
+      </div>
+      <div id="questions">
+      </div>
+    </section>
 
     <section id="variables">
       <h1>Les variables et les opérateurs</h1>
@@ -67,7 +156,7 @@
           du contexte d'exécution actuel et rendues disponibles dans le contexte d'exécution avant même que l'exécution
           du code ne commence.
           Seule la délcaration est hissée, pas sa valeur.
-          <pre style="tab-size: 2;">
+        <pre style="tab-size: 2;">
             <code>
   console.log(x); // undefined
   var x = 5;
@@ -83,11 +172,11 @@
         </pre>
 
         <h2>les Closures</h2>
-        <p>closure est une fonction interne qui a accès aux variables de son scope parent, même après que la fonction
+        <p>
+          closure est une fonction interne qui a accès aux variables de son scope parent, même après que la fonction
           parent ait été exécutée et que son scope soit théoriquement "fermé". Cela permet à la fonction interne de
           conserver
           et d'utiliser les valeurs des variables externes même après la fin de l'exécution de la fonction parent.
-
         </p>
       </div>
 
@@ -136,39 +225,142 @@
       <h1>Les fonctions</h1>
       <h2>Qu'est-ce qu'une fonction</h2>
       <h2>Paramètres</h2>
+      <p>
+      <ul>
+        <li>Paramètre : quand on crée la fonction</li>
+        <li>Argument : quand on passe un élément dans le paramètre</li>
+      </ul>
+      </p>
       <h2>Types de fonctions</h2>
       <h3>fonctions classique</h3>
-        <pre style="tab-size: 2;">
+      <p>
+      <ul>
+        <li>Possèdent un "this", sorte de variable disponible dans le contexte de la fonction.</li>
+      </ul>
+      </p>
+      <pre style="tab-size: 2;">
           <code>
   function standardFunction(x, y) {
     return x + y;
 }
           </code>
-        </pre >
-      <p>Les fonctions classiquent créent un "this", sorte de variable disponible dans le conteste de la fonction.</p>
+        </pre>
       <h3>fonctions nommées</h3>
-        <pre style="tab-size: 2;">
-          <code>
+      <pre style="tab-size: 2;">
+        <code>
   function namedFunction(x, y) {
     return x * y;
 }
-          </code>
-        </pre>
+        </code>
+      </pre>
       <h3>fonctions anonymes</h3>
       <pre style="tab-size: 2;">
         <code>
   let anonymousFunction = function() {
     console.log("Je suis une fonction anonyme !");
 };
-       </code>
+        </code>
       </pre>
       <h3>fonctions fléchées</h3>
-      <p>Les fonctions fléchées n'utilisent pas this, mais peuvent lire le this d'une fonction classique si elles se situent dedans.
-        Elles lisent le .this du contexte global de la fonction (window).
+      <p>
+      <ul>
+        <li>N'utilisant pas this autonome </li>
+        <li>Peuvent lire le this d'une fonction classique si elles se
+          situent dedans.</li>
+        <li>Lisent le .this du contexte global de la fonction</li>
+        <li>Elles utilisent l'opérateur => pour définir la fonction.</li>
+      </ul>
       </p>
-      <h3>fonctions d'ordre supérieur</h3>
+      <pre style="tab-size: 2;">
+        <code>
+// Définition d'une fonction fléchée pour multiplier deux nombres
+const multiplier = (a, b) => a * b;
+
+// Utilisation de la fonction fléchée pour calculer le produit de deux nombres
+const resultat = multiplier(5, 3);
+console.log("Le résultat est : " + resultat);
+// Affiche : "Le résultat est : 15"
+        </code>
+      </pre>
+      <h3>Fonctions pures</h3>
+      <p>
+      <ul>
+        <li>Retournent toujours la même chose en fonction des mêmes arguments fournis.</li>
+        <li>N'utilise aucune valeur mutable et n'a pas d'effets secondaires en dehors de son bloc.</li>
+        <li>Le résultat ne doit pas changer par rapport à une variable externe</li>
+      </ul>
+      </p>
+      <pre style="tab-size: 2;">
+            <code>
+function add(a,b) {
+  return a + b
+}
+console.log(add(10,10))
+//Ici la fonction add renvera toujours le même résultat.
+
+const number = 99
+function add(a,b) {
+  number++
+  return a + b
+}
+console.log(add(10,10))
+// Ici on a un effet secondaire car on change un élément en déhors de la fonction
+            </code>
+      </pre>
+      <h3>Fonctions d'ordre supérieur</h3>
+      <p>
+      <ul>
+        <li>Une fonction d'ordre supérieur est une fonction qui prend en argument une autre fonction ou/et qui retourne
+          une
+          fonction.
+        </li>
+        <li>
+          Permet code réutilisable, flexible et permet des abstactrions puissantes.
+        </li>
+      </ul>
+      </p>
+      <pre style="tab-size: 2;">
+        <code>
+// Je déclare ma fonction d'ordre supérieur customFilter avec les paramètres "arr" (un tableau) et "callback" (une fonction)
+function customFilter(arr, callback) {
+// Je crée un tableau vide dans lequel je stockerai les éléments filtrés
+  const filteredArray = []
+// Je parcours chaque élément de l'array "arr" en utilisant une boucle for
+  for (let i = 0; i < arr.length; i++) {
+// Je vérifie si l'élément actuel de l'array "arr" satisfait la condition définie par le callback
+    if (callback(arr[i])) {
+// Si la condition est vraie, j'ajoute cet élément au tableau filtré
+      filteredArray.push(arr[i])
+    }
+  }
+// Je retourne le tableau filtré une fois la boucle terminée
+  return filteredArray
+}
+
+// J'initialise un tableau "salaries" contenant différents salaires
+const salaries = [1200, 5000, 4000, 2500, 3450, 1800]
+
+// J'affiche le résultat de l'appel à la fonction customFilter avec "salaries" comme tableau et une fonction de callback
+// qui vérifie si chaque élément (salaire) est supérieur à 3000
+console.log(customFilter(salaries, salary => salary > 3000));
+        </code>
+      </pre>
       <h3>Expression de fonction</h3>
       <h3>Paramètres par défaut</h3>
+      <p>
+        Définit une valeur par défaut si un argument correspondant au paramètre en question n'est pas fourni.
+      </p>
+      <pre style="tab-size: 2;">
+        <code>
+function welcoming(userName = "visiteur"){
+  return `Bienvenue, ${userName}.`
+}
+console.log(welcoming("Paul"));
+console.log(welcoming("Sara"));
+console.log(welcoming());
+// Ici le paramètre par défaut "visiteur" apparait si aucun UserName n'est définit.
+        </code>
+      </pre>
       <h3>Fonctions déjà existantes</h3>
       <h3>Recursivité</h3>
     </section>
@@ -224,6 +416,29 @@
       <h2>Les boulces (for...in)</h2>
       <h2>Les boucle (for...of)</h2>
       <h2>Les boucles (foreach) </h2>
+      <ul>
+        <li>
+          Cette méthode prend en argument une fonction de rappel (callback) qui sera exécutée pour chaque élément du tableau.
+        </li>
+        <li>
+          Le callback peut recevoir jusqu'à trois arguments : l'élément actuel, l'index de l'élément et le tableau sur lequel forEach() a été appelé.
+        </li>
+        <li>
+          Itère sur l'objet original contrairement à .map qui créer un nouvel objet. 
+        </li>
+      </ul>
+      <pre>
+        <code>
+const number = [1,2,3,4]
+numbers.forEach((num, index, array) => console.log(num))
+// affiche
+//1 0(4)[1,2,3,4]
+//2 1(4)[1,2,3,4]
+//3 2(4)[1,2,3,4]
+//4 3(4)[1,2,3,4]
+        </code>
+      </pre>
+
       <h2>Concaténer un tableau associatif</h2>
     </section>
     <br>
@@ -233,17 +448,102 @@
       <p>...</p>
       <h2>Le destructuring / affectation par décomposition </h2>
       <p>consiste à créer des variables à partir des propriétés d'un objet ou des éléments d'un tableau.</p>
+      <pre style="tab-size: 2;">
+        <code>
+const userObj = {
+  userName: "Karl",
+  age: 44,
+  country: "Germany"
+}
+
+const {age, country, userName} = userObj
+console.log(age, country, userName);
+// Ici les propriétés de l'objet userObj (userName, age, country) sont extraites et transformées en variables.
+
+const {userName: mainName, age: exactAge, country:origin} = userObj
+console.log(MainName, exactAge, Origin)
+//Ici les noms de variables ont été changés
+
+const {country, sport = "football", beverage ="beer"} = userObj
+console.log(country, sport, beverage)
+//Créer des valeurs par défaut si la propriété n'est pas présente dans l'objet d'origine
+        </code>
+      </pre>
+      <p>
+        On peut passer des propriété d'objets directement en tant que paramètre à nos fonctions
+      </p>
+      <pre style="tab-size: 2;">
+        <code>
+const numbers = {
+  num1: 50,
+  num2: 100
+}
+    function foo(numbers) {
+      console.log(numbers)
+      return numbers.num1 + numbers.num2
+}
+console.log(foo(numbers))
+
+function foo2({num1, num2}) {
+  console.log(numbers)
+  return num1 + num2
+}
+console.log(foo2(numbers))
+
+// Ces 2 fonctions font la même chose. Les propiétés de l'objet on été directement passées en tant de paramètre à la fonction foo2.
+
+const animals = ["cat","dog","mouse","lion"];
+const [cat, dog] = animals
+console.log(cat, dog)
+// Les valeurs du "cat" et "dog" du tableau "animal" ont été textraites dans de nouvelles variables par destructruring.
+        </code>
+      </pre>
+      <p>
+        On peut faire ignorer des valeurs lors du destructuring grâce à ",,"
+      </p>
+      <pre style="tab-size: 2;">
+        <code>
+const fruits = ["strawberry", "grapes", "banana", "apples"]
+const [strawberry, grapes,, apple] = fruits
+console.log(strawberry, grapes, apple)
+// absence de "banana" ici
+        </code>
+      </pre>
+      <p>
+        Exemple avec le reste d'un tableau
+      </p>
+      <pre style="tab-size: 2;">
+        <code>
+            EXEMPLE
+        </code>
+      </pre>
       <h2>Objet Set</h2>
       <h2>Objet Map</h2>
       <h2>Objet WeakSet</h2>
       <h2>Objet WeakMap</h2>
       <h2>REST parameter / nombre infini d'arguments</h2>
-      <h2>Spred operator / syntaxe de décomposition</h2>
+      <p>
+        Le rest parameter "..." permet de prendre en compte un nombre de strings arbitaire lors de l'appel de la
+        fonction concatenation
+      </p>
+      <pre style="tab-size: 2;">
+        <code>
+function concatenation(...strings){
+  console.log(strings);
+  return strings.reduce((acc,cur) => acc + cur)
+}
+
+console.log(concatenation("Je ", "suis ", "heureux."));
+//  Chacune des 3 strings est ici passée en argument lors de l'appel de la fonction "concatenation"
+        </code>
+      </pre>
+      <h2>Spread operator / syntaxe de décomposition</h2>
       <p>Permet de copier les valeurs d'un élément itérable (tableau, chaîne, objet...).
-        pratique pour effecteur une copipe superficielle / afficher une liste. Les objets sont des valeurs de référence,
+        pratique pour effecteur une copie superficielle / afficher une liste. Les objets sont des valeurs de référence,
         pas des primitives. Copie d'un objet = copie d'un emplacement de mémoire de celui-ci (shallow copie)
-        <pre style="tab-size: 2;">
-          <code>
+      </p>
+      <pre style="tab-size: 2;">
+        <code>
 const array = [1,2,3,]
 console.log(...array)
 // Affiche tous les éléments de array
@@ -265,10 +565,9 @@ const obj = {
 
 const shallowObjectCopy = {...obj, work: "Magneto"}
 // Fonctionne également avec les objets.
-          </code>
-        </pre >
+        </code>
+      </pre>
 
-      </p>
     </section>
     <br>
     <section id="BOM">
@@ -285,15 +584,62 @@ const shallowObjectCopy = {...obj, work: "Magneto"}
     <section id="DOM">
       <h1>DOM (Document Oriented Model)</h1>
       <h2>Accéder aux élément du DOM</h2>
-      <p>
+      <h3>getElementsByTagName() </h3>
       <ul>
-        <li>getElementsByTagName() - Sélectionne tous les éléments avec la balise entre parenthèses</li>
-        <li>getElementById() - Sélectionne un seul élément : le premier ayant l'ID entre parenthèses</li>
-        <li>getElementsByClassName() - Sélectionne tous les éléments avec la classe entre parenthèses</li>
-        <li>querySelector() - Sélectionne un seul élément : celui avec le sélecteur entre parenthèses</li>
-        <li>querySelectorAll() - Sélectionne tous les éléments avec le sélecteur entre parenthèses</li>
+        <li>
+          Sélectionne tous les éléments avec la balise entre parenthèses
+        </li>
       </ul>
-      </p>
+      <pre style="tab-size: 2;">
+        <code>
+const paragraphs = document.getElementsByTagName('p');
+        </code>
+      </pre>
+      <h3>getElementById()</h3>
+      <ul>
+        <li>
+          Sélectionne tous les éléments avec la balise entre parenthèses
+        </li>
+      </ul>
+      <pre style="tab-size: 2;">
+        <code>
+const paragraphe2 = document.getElementById('paragraphe2');
+        </code>
+      </pre>
+      <h3>getElementsByClassName()</h3>
+      <ul>
+        <li>
+          Sélectionne tous les éléments avec la classe entre parenthèses
+        </li>
+      </ul>
+      <pre style="tab-size: 2;">
+        <code>
+const paragraphe = document.getElementById('paragraphe');
+        </code>
+      </pre>
+      <h3>querySelector()</h3>
+      <ul>
+        <li>
+          Sélectionne un seul élément : celui avec le sélecteur entre parenthèses
+        </li>
+      </ul>
+      <pre>
+        <code>
+const premierParagraphe = document.querySelector('p');
+        </code>
+      </pre>
+      <h3>querySelectorAll()</h3>
+      <ul>
+        <li>
+          Sélectionne tous les éléments avec le sélecteur entre parenthèses
+        </li>
+      </ul>
+      <pre style="tab-size: 2;">
+        <code>
+const paragraphs = document.querySelectorAll('p');
+        </code>
+      </pre>
+
       <h2>Modifier des éléments</h2>
       <p>textContent : Modifie le texte d'un élément
       </p>
@@ -365,8 +711,9 @@ const shallowObjectCopy = {...obj, work: "Magneto"}
       <h2>Async et Await</h2>
       <h2>Callback</h2>
       <p>fonction qui est passée comme argument à une autre fonction et qui est ensuite invoquée à un moment ultérieur
-        dans l'exécution de cette fonction parente,
-        généralement en réponse à un événement ou à une condition spécifique.</p>
+        dans l'exécution de cette fonction parente, généralement en réponse à un événement ou à une condition
+        spécifique.
+      </p>
       <h2>Fetch & axios</h2>
       <p>Get / avec fetch</p>
       <p>Get / send avec Axios</p>

@@ -47,6 +47,12 @@ p {
   font-family: 'figtree';
 }
 
+li {
+  color: blanchedalmond;
+  font-size: 16px;
+  font-family: 'figtree';
+}
+
 pre {
   display: flex;
 }
