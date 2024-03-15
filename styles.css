@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
+.contenu {
+  margin-top: 5%;
+}
 
 a {
   color: inherit;
@@ -59,13 +62,51 @@ pre {
 
 header {
   position: fixed;
-  display: inline;
+  display: flex;
+  align-items: center;
   top: 0;
   width: 100%;
   height: 5%;
-  background-color: #49BEB7; /* Ajoutez votre couleur de fond souhaitée */
+  background-color: #49BEB7;
   color: #fff;
   padding: 20px;
+  margin-bottom: 5px;
+}
+
+.container_header {
+  display: flex;
+}
+
+.container_sections_index {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 2em;
+}
+
+.chapters {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: aliceblue;
+  height: 290px;
+  width: 150px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  align-self: flex-start;
+}
+.chapters h3 {
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #d61b4d;
+  font-weight: bold;
+  text-align: center;
+}
+
+.chapters p {
+  color: black
 }
 
 .btn-back-to-top {
@@ -88,8 +129,15 @@ header {
   background-color: #d61b4d
 }
 
+.btn-menu {
+  font-family: 'figtree';
+  margin-right: 25px;
+  margin-left: 25px;
+  align-items: center;
+}
+
 nav {
-  margin-top: 100px;
+  padding-top: 5%;
   font-family: 'figtree';
   font-size: 1em; /* Taille relative pour h2 */
   color:antiquewhite;

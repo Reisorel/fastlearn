@@ -12,16 +12,20 @@
 </head>
 
 <body>
-  <header>
-    <h1 class="header-title"><a href="#">Site mémo JS !</a></h1>
-    <a class="btn-back-to-top">Chapitre aléatoire</a>
-  </header>
+  <div class="container_header">
+    <header>
+      <h1 class="header-title"><a href="javascript.html">Site mémo JS !</a></h1>
+      <a class="btn-back-to-top">Chapitre aléatoire</a>
+      <a class="btn-menu" href="index.html">index</a>
+      <a class="btn-menu" href="index.html">test</a>
+    </header>
+  </div>
   <nav>
     <ol>
 
       <li><a href="#typesdedonnees">Types de données</a></li>
       <li><a href="#variables">Variables et opérateurs</a></li>
-      <li><a href="#boîtes">Boîtes</a></li>
+      <li><a href="#fenêtres/interactions">Fenêtres et interactions</a></li>
       <li><a href="#fonctions">Fonctions</a></li>
       <li><a href="#logique">La logique</a></li>
       <li><a href="#boucles">Les boucles </a></li>
@@ -46,6 +50,11 @@
       <div id="cours">
         <h1>Cours</h1>
         <h2>Primitives</h2>
+        <ul>
+          <li>Données de base, ni un objet nie une méthode.</li>
+          <li>Non-mutable</li>
+          <li>Au nombre de 7 :</li>
+        </ul>
         <pre style="tab-size: 2;">
           <code>
 // Nombre :
@@ -66,6 +75,12 @@ const monBigInt = BigInt(12345678901234567890);
         </pre>
 
         <h2>Objets</h2>
+        <ul>
+          <li>
+            Structure de données complexe qui peut stocker plusieurs valeurs (appelées propriétés) et fonctionnalités
+            (appelées méthodes) dans une seule entité.
+          </li>
+        </ul>
         <pre style="tab-size: 2;">
           <code>
 // Objet
@@ -81,16 +96,25 @@ new Error('Une erreur est survenue')
           </code>
         </pre style="tab-size: 2;">
         <h2>Copie partielle / profonde</h2>
-        <p>
-          Duplication de données où seules les références aux emplacements de mémoire des objets sont copiées, plutôt
-          que les objets eux-mêmes. Les nouvelles variables pointent vers les mêmes objets en mémoire
-          que les variables originales, entraînant des modifications répercutées sur l'objet original en cas de
-          modification de la copie partielle.
-          </br>
-          Cela ne s'applique pas aux types de données primitifs, car ils sont immuables, ce qui signifie que leur valeur
+        <ul>
+          <li>
+            Duplication de données où seules les références aux emplacements de mémoire des objets sont copiées, plutôt
+            que les objets eux-mêmes.
+          </li>
+          <li>
+            Les nouvelles variables pointent vers les mêmes objets en mémoire
+            que les variables originales,
+          </li>
+          <li>
+             entraînant des modifications répercutées sur l'objet original en cas de
+            modification de la copie partielle.
+          </li>
+          <li>
+          Cela ne s'applique pas aux types de données primitives, car elles sont immuables, ce qui signifie que leur valeur
           ne peut pas être modifiée une fois qu'ils sont créés.
-        </p>
-        <pre>
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
           <code>
 // Création de l'objet original
 let personnageOriginal = {
@@ -113,10 +137,14 @@ console.log(personnageOriginal);
 console.log("Valeurs de la copie après modification :");
 console.log(copiePartielle);
           </code>
-        </pre>
-        <p>Aperçu de l'output du console.log</p>
-        <pre>
-          <code style="tab-size: 2;">
+        </pre style="tab-size: 2;">
+        <ul>
+          <li>
+            Aperçu de l'output du console.log
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
+          <code>
 Valeurs originales :
 { nom: 'Ezio', niveau: 50, pointsDeVie: 80 }
 Valeurs de la copie après modification :
@@ -125,37 +153,86 @@ Valeurs de la copie après modification :
         </pre>
       </div>
       <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz types de données</a></h2>
       </div>
     </section>
 
     <section id="variables">
-      <h1>Les variables et les opérateurs</h1>
+      <h1>Les variables</h1>
       <div id="cours">
         <h1>Cours </h1>
-        <h2>Variables</h2>
-
         <h2>Déclarations de variables</h2>
-        <p>let / const / var (obsolète)</p>
-        <p>On peut redéclarer des variables var sans provoquer d'erreurs.</p>
-        <p>On ne peut pas déclarer de const vide contrairement à let ou var.</p>
-        <p>Les constantes doivent toujours être initialisées avec des valeurs</p>
+        <ul>
+          <li>let / const / var (obsolète)</li>
+          <li>On peut redéclarer des variables var et let sans provoquer d'erreurs.</li>
+          <li>Les constantes doivent toujours être initialisées avec des valeurs</li>
+        </ul>
+        <pre>
+          <code>
+var nom = "Jean"; // Scope global, obsolète.
+let age = 30; // locale au bloc de code dans lequel elle est déclarée. Peut être redéclarée.
+const pi = 3.14; // ne peut pas être redéclarée
+          </code>
+        </pre>
 
         <h2>Concaténation</h2>
-        <p>Joindre plusieurs chaînes de caractères ensemble pour former une seule chaîne avec l'opérateur "+"</p>
-
+        <ul>
+          <li>Joindre plusieurs chaînes de caractères ensemble pour former une seule chaîne avec l'opérateur "+"</li>
+        </ul>
+        <pre>
+          <code>
+chaine1 = "Bonjour"
+chaine2 = "monde"
+concatenation = chaine1 + " " + chaine2
+afficher(concatenation) // Cela affichera "Bonjour monde"
+          </code>
+        </pre>
         <h2>Portée des variables</h2>
-        <p>Let et const sont block-scoped (condition, switch, fonction, boucle for...)</p>
+        <ul>
+          <li>
+            Let et const sont block-scoped (condition, switch, fonction, boucle for...)
+          </li>
+        </ul>
+        <pre>
+          <code>
+// Portée globale
+const globalConst = "Je suis une constante globale";
+let globalLet = "Je suis une variable globale";
+
+function exampleFunction() {
+    // Portée locale à la fonction exampleFunction
+    const localConst = "Je suis une constante locale";
+    let localLet = "Je suis une variable locale";
+//console.log ici aura accès à toutes les variables
+}
+//console.log ici n'aura accès qu'au variables globales
+// Pas à celles définies à l'intérieur de la fonction exempleFunction
+          </code>
+        </pre>
 
         <h2>Le Hoisting</h2>
-        <p>toutes les variables se font hisser dans un objet "variable object"</p>
-        <p>Une variable var se fait hoisted et peut être utilisée avant sa déclaration, car elle est initialisée à
-          undefined.
-          Let & const sont hoisted mais pas initialisées.</p>
-        <p>Les déclarations de fonctions et de variables sont hissées en JavaScript. ELles sont stockées dans la mémoire
-          du VO(Variables Object)
-          du contexte d'exécution actuel et rendues disponibles dans le contexte d'exécution avant même que l'exécution
-          du code ne commence.
-          Seule la délcaration est hissée, pas sa valeur.
+        <ul>
+          <li>
+            Toutes les variables se font hisser dans un objet "variable object"
+          </li>
+          <li>
+            Une variable var se fait hoisted et peut être utilisée avant sa déclaration, car elle est initialisée à
+            undefined.
+          </li>
+          <li>
+            Let & const sont hoisted mais pas initialisées.
+          </li>
+          <li>
+            Les déclarations de fonctions et de variables sont hissées en JavaScript. ELles sont stockées dans la
+            mémoire
+            du VO(Variables Object)
+            du contexte d'exécution actuel et rendues disponibles dans le contexte d'exécution avant même que
+            l'exécution
+            du code ne commence.
+            Seule la délcaration est hissée, pas sa valeur.
+          </li>
+        </ul>
         <pre style="tab-size: 2;">
             <code>
   console.log(x); // undefined
@@ -200,6 +277,7 @@ function creerCompteur() {
   return incrementer;
 }
 // Appelle creerCompteur et stocke la fonction retournée dans monCompteur
+let monCompteur = creerCompteur();
 // IMPORTANT, c'est cette assignation qui crée la closure,
 // Elle établit le lien entre l'environnement lexical de la fonction interne...
 //...et son utilisation en dehors de ce contexte."
@@ -219,25 +297,60 @@ monCompteur(); // Affiche 3
     </section>
 
 
+
+    <section id="fenêtres/interactions">
+      <h1>Fenêtre et interactions</h1>
+      <div class="cours">
+        <h1>Demander / afficher des infos aux utilisateurs</h1>
+        <h2>Afficher info</h2>
+        <h2>Demander info</h2>
+        <h2>Demander confirmation</h2>
+        <h2>Demander des renseignements</h2>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz fenêtres et interactions</a></h2>
+      </div>
+
     </section>
-    <br>
-    <section id="boîtes">
-      <h1>Demander / afficher des infos aux utilisateurs</h1>
-      <h2>Afficher info</h2>
-      <h2>Demander info</h2>
-      <h2>Demander confirmation</h2>
-      <h2>Demander des renseignements</h2>
-    </section>
-    <br>
+
     <section id="fonctions">
       <h1>Les fonctions</h1>
       <h2>Qu'est-ce qu'une fonction</h2>
+      <ul>
+        <li>
+          Bloc de code qui peut être appelé et exécuté pour effectuer une tâche spécifique ou renvoyer une valeur.
+        </li>
+      </ul>
+      <pre>
+        <code style="tab-size: 2;">
+function messageBienvenue() {
+  return "Bonjour, c'est le site de François";
+}
+
+// Appel de la fonction messageBienvenue
+let message = messageBienvenue();
+
+console.log(message); // Affiche "Bonjour, c'est le site de François"
+        </code>
+      </pre>
       <h2>Paramètres</h2>
       <p>
       <ul>
         <li>Paramètre : quand on crée la fonction</li>
         <li>Argument : quand on passe un élément dans le paramètre</li>
       </ul>
+      <pre style="tab-size: 2;">
+        <code>
+  function addition(a, b) {
+    return a + b;
+}
+// Ici a et b sont des paramètres
+
+let resultat = addition(3, 5);
+// Ici 6 et 6 sont des arguments passés aux paramètres a et b
+        </code>
+      </pre>
       </p>
       <h2>Types de fonctions</h2>
       <h3>fonctions classique</h3>
@@ -251,22 +364,35 @@ monCompteur(); // Affiche 3
   function standardFunction(x, y) {
     return x + y;
 }
+standardFunction(6,6) // affiche 12
           </code>
         </pre>
       <h3>fonctions nommées</h3>
+      <ul>
+        <li>
+          Les fonctions nommées peuvent être appelées à l'intérieur de leur propre définition (récursivité)
+        </li>
+      </ul>
       <pre style="tab-size: 2;">
         <code>
   function namedFunction(x, y) {
     return x * y;
 }
+namedFunction(6,6) // affiche 36
         </code>
       </pre>
       <h3>fonctions anonymes</h3>
+      <ul>
+        <li>
+          Les fonctions anonymes doivent être stockées dans une variable ou passées comme argument à une autre fonction pour être utilisées.
+        </li>
+      </ul>
       <pre style="tab-size: 2;">
         <code>
   let anonymousFunction = function() {
     console.log("Je suis une fonction anonyme !");
 };
+anonymousFunction(); // Affiche "Je suis une fonction anonyme"
         </code>
       </pre>
       <h3>fonctions fléchées</h3>
@@ -354,11 +480,28 @@ console.log(customFilter(salaries, salary => salary > 3000));
         </code>
       </pre>
       <h3>Expression de fonction</h3>
-      <h3>Paramètres par défaut</h3>
-      <p>
-        Définit une valeur par défaut si un argument correspondant au paramètre en question n'est pas fourni.
-      </p>
+      <ul>
+        <li>
+          Une expression de fonction en JavaScript est une manière de définir une fonction en tant qu'expression.
+        </li>
+        <li>
+          Elle peut être stockée dans une variable, passée comme argument à une autre fonction ou retournée par une autre fonction.
+        </li>
+      </ul>
       <pre style="tab-size: 2;">
+        <code>
+  let maFonction = function() {
+    console.log("Je suis une expression de fonction !");
+};
+        </code>
+      </pre>
+      <h3>Paramètres par défaut</h3>
+      <ul>
+        <li>
+          Définit une valeur par défaut si un argument correspondant au paramètre en question n'est pas fourni.
+        </li>
+      </ul>
+      <pre style="tab-size: 2";>
         <code>
 function welcoming(userName = "visiteur"){
   return `Bienvenue, ${userName}.`
@@ -370,9 +513,78 @@ console.log(welcoming());
         </code>
       </pre>
       <h3>Fonctions déjà existantes</h3>
-      <h3>Recursivité</h3>
+      <ul>
+        <li>
+          Javascript possède nombre de fonction déjà existantes, par exemple :
+        </li>
+        <li>Math</li>
+      </ul>
+        <pre>
+          <code style="tab-size: 2";>
+Math.round(2.4); // Retourne 2
+Math.sqrt(16);   // Retourne 4
+Math.cos(Math.PI); // Retourne -1
+          </code>
+        </pre>
+        <ul>
+          <li>Arry</li>
+          <li>Fonction pour opérer dans les tableaux : push, pop, forEach, map, filter, reduce ect...</li>
+        </ul>
+        <pre>
+          <code style="tab-size: 2";>
+let fruits = ["Pomme", "Banane", "Orange"];
+fruits.push("Fraise"); // Ajoute "Fraise" à la fin du tableau
+fruits.forEach(fruit => console.log(fruit)); // Affiche chaque élément du tableau
+          </code>
+        </pre>
+        <ul>
+          <li>String</li>
+          <li>
+            Fournit des fonctions pour manipuler des chaînes de caractères, telles que charAt, substring, indexOf, toUpperCase, etc.
+          </li>
+        </ul>
+        <pre>
+          <code style="tab-size: 2";>
+let message = "Bonjour le monde";
+console.log(message.charAt(0)); // Affiche "B"
+console.log(message.indexOf("le")); // Affiche
+          </code>
+        </pre>
+        <ul>
+          <li>Date</li>
+          <li>
+            fournit des fonctions pour travailler avec les dates et les heures, telles que getFullYear, getMonth, getDate, getHours, etc.
+          </li>
+        </ul>
+        <pre>
+          <code style="tab-size: 2";>
+let aujourdHui = new Date();
+console.log(aujourdHui.getFullYear()); // Affiche l'année actuelle
+          </code>
+        </pre>
+        <h3>Recursivité</h3>
+        <ul>
+          <li>
+            Fonction qui s'apppelle elle-même 
+          </li>
+        </ul>
+        <pre  style="tab-size: 2">
+          <code>
+function somme(n) {
+  // Condition de base : si n est égal à 1, retourne 1
+  if (n === 1) {
+      return 1;
+  }
+  // Récurse : ajoute n à la somme des nombres de 1 à n-1
+  return n + somme(n - 1);
+}
+
+// Exemple d'utilisation de la fonction somme
+console.log(somme(5)); // Affiche 15 (car 1 + 2 + 3 + 4 + 5 = 15)
+          </code>
+        </pre>
+
     </section>
-    <br>
     <section id="logique">
       <h1>4 - La logique</h1>
       <h2>If/else</h2>
