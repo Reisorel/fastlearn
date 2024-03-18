@@ -40,7 +40,9 @@
       <li><a href="#API">API</a></li>
       <li><a href="#asynchrone">Asynchrone</a></li>
       <li><a href="#cookies">Cookies</a></li>
+      <li><a href="#modules">Modules</a></li>
       <li><a href="#inclassables">Inclassables</a></li>
+      <li><a href="#astuces">Astuces</a></li>
     </ol>
   </nav>
 
@@ -384,7 +386,8 @@ namedFunction(6,6) // affiche 36
       <h3>fonctions anonymes</h3>
       <ul>
         <li>
-          Les fonctions anonymes doivent être stockées dans une variable ou passées comme argument à une autre fonction pour être utilisées.
+          Les fonctions anonymes doivent être stockées dans une variable ou passées comme argument à une autre fonction
+          pour être utilisées.
         </li>
       </ul>
       <pre style="tab-size: 2;">
@@ -485,7 +488,8 @@ console.log(customFilter(salaries, salary => salary > 3000));
           Une expression de fonction en JavaScript est une manière de définir une fonction en tant qu'expression.
         </li>
         <li>
-          Elle peut être stockée dans une variable, passée comme argument à une autre fonction ou retournée par une autre fonction.
+          Elle peut être stockée dans une variable, passée comme argument à une autre fonction ou retournée par une
+          autre fonction.
         </li>
       </ul>
       <pre style="tab-size: 2;">
@@ -501,7 +505,7 @@ console.log(customFilter(salaries, salary => salary > 3000));
           Définit une valeur par défaut si un argument correspondant au paramètre en question n'est pas fourni.
         </li>
       </ul>
-      <pre style="tab-size: 2";>
+      <pre style="tab-size: 2" ;>
         <code>
 function welcoming(userName = "visiteur"){
   return `Bienvenue, ${userName}.`
@@ -519,56 +523,58 @@ console.log(welcoming());
         </li>
         <li>Math</li>
       </ul>
-        <pre>
+      <pre>
           <code style="tab-size: 2";>
 Math.round(2.4); // Retourne 2
 Math.sqrt(16);   // Retourne 4
 Math.cos(Math.PI); // Retourne -1
           </code>
         </pre>
-        <ul>
-          <li>Arry</li>
-          <li>Fonction pour opérer dans les tableaux : push, pop, forEach, map, filter, reduce ect...</li>
-        </ul>
-        <pre>
+      <ul>
+        <li>Arry</li>
+        <li>Fonction pour opérer dans les tableaux : push, pop, forEach, map, filter, reduce ect...</li>
+      </ul>
+      <pre>
           <code style="tab-size: 2";>
 let fruits = ["Pomme", "Banane", "Orange"];
 fruits.push("Fraise"); // Ajoute "Fraise" à la fin du tableau
 fruits.forEach(fruit => console.log(fruit)); // Affiche chaque élément du tableau
           </code>
         </pre>
-        <ul>
-          <li>String</li>
-          <li>
-            Fournit des fonctions pour manipuler des chaînes de caractères, telles que charAt, substring, indexOf, toUpperCase, etc.
-          </li>
-        </ul>
-        <pre>
+      <ul>
+        <li>String</li>
+        <li>
+          Fournit des fonctions pour manipuler des chaînes de caractères, telles que charAt, substring, indexOf,
+          toUpperCase, etc.
+        </li>
+      </ul>
+      <pre>
           <code style="tab-size: 2";>
 let message = "Bonjour le monde";
 console.log(message.charAt(0)); // Affiche "B"
 console.log(message.indexOf("le")); // Affiche
           </code>
         </pre>
-        <ul>
-          <li>Date</li>
-          <li>
-            fournit des fonctions pour travailler avec les dates et les heures, telles que getFullYear, getMonth, getDate, getHours, etc.
-          </li>
-        </ul>
-        <pre>
+      <ul>
+        <li>Date</li>
+        <li>
+          fournit des fonctions pour travailler avec les dates et les heures, telles que getFullYear, getMonth, getDate,
+          getHours, etc.
+        </li>
+      </ul>
+      <pre>
           <code style="tab-size: 2";>
 let aujourdHui = new Date();
 console.log(aujourdHui.getFullYear()); // Affiche l'année actuelle
           </code>
         </pre>
-        <h3>Recursivité</h3>
-        <ul>
-          <li>
-            Fonction qui s'apppelle elle-même 
-          </li>
-        </ul>
-        <pre  style="tab-size: 2">
+      <h3>Recursivité</h3>
+      <ul>
+        <li>
+          Fonction qui s'apppelle elle-même
+        </li>
+      </ul>
+      <pre style="tab-size: 2">
           <code>
 function somme(n) {
   // Condition de base : si n est égal à 1, retourne 1
@@ -730,6 +736,66 @@ const average = marks.reduce((acc, mark) => acc + mark, 0) / mark.length
 // Initialise à 0, puis itère 0+18, 18+5, 23+17, 40+12, ect...
 // Divise la somme par le nombre d'éléments pour obtenir une moyenne
 console.log(average)
+        </code>
+      </pre>
+
+      <h2>Méthode .sort </h2>
+      <ul>
+        <li>
+          La méthode .sort trie les éléments d'un tableau (par défaut en les convertissant en chaîne de caractères)
+        </li>
+        <li>
+          Elle transforme le tableau sur lequelle est elle appliquée
+        </li>
+        <li>
+          Exemple avec un tableau contenant des lettres
+        </li>
+      </ul>
+      <pre style="tab-size: 2;">
+        <code>
+const letters = ["z","b","a","d","e"];
+
+let sortedLetters = letters.sort()
+console.log(sortedLetters) // Affiche ["a", "b", "d", "e", "z"]
+        </code>
+      </pre>
+      <ul>
+        <li>
+          Exemple avec un tableau contenant des nombres
+        </li>
+      </ul>
+      <pre style="tab-size: 2;">
+        <code>
+const numbers2 = [10,55,2,250,500,85]
+numbers.sort((a,b) => a - b) // Affiche [10, 55, 2, 250, 500, 85]
+        </code>
+      </pre>
+      <ul>
+        <li>
+          Exemple avec un un tableaux d'objets
+        </li>
+      </ul>
+      <pre style="tab-size: 2;">
+        <code>
+const store = [
+{
+    item: "Cahier",
+    price: 20
+},
+{
+    item: "Sac",
+    price: 60
+},
+{
+    item: "Stylo",
+    price: 2
+},
+]
+store.sort((a,b) => a.price - b.price)
+console.log(store)
+// Affiche les items par ordre de prix
+// 0:{item: 'Stylo, price: 2}
+// 1:{item: 'Cachier', price:20}
         </code>
       </pre>
 
@@ -976,14 +1042,14 @@ const paragraphs = document.querySelectorAll('p');
       <h2>Créer objet avec constructeur</h2>
       <h2>Getter et Setter</h2>
     </section>
-    <br>
+
     <section id="date">
       <h1>Date</h1>
       <h2>Objet Date</h2>
       <h2>Getter/setter avec Date</h2>
       <h2>Transformer date</h2>
     </section>
-    <br>
+
     <section id="api">
       <h1>API</h1>
       <h2>Définition</h2>
@@ -992,39 +1058,189 @@ const paragraphs = document.querySelectorAll('p');
       <p>get</p>
       <p>send</p>
     </section>
-    <br>
+
     <section id="asynchrone">
       <h1>Asynchrone</h1>
       <h2>Définition</h2>
+      <ul>
+        <li>
+          "Asynchrone" fait référence à l'exécution de code sans bloquer le thread principal.
+        </li>
+        <li>
+          Cela signifie que lorsque vous exécutez une opération asynchrone, le reste du code peut continuer à s'exécuter
+          sans attendre que cette opération soit terminée.
+        </li>
+        <li>
+          Les opérations asynchrones sont couramment utilisées pour des tâches telles que les appels réseau, la
+          lecture/écriture de fichiers, ou tout autre type d'opération qui peut prendre du temps.
+        </li>
+      </ul>
       <h2>Promesses</h2>
-      <p>Objet représentant l'achèvement ou l'échec éventuel d'une opération asynchrone.
-        3 était : en attente (pending), résolue (fulfilled) ou rejetée (rejected).
-        Une promesse est créée avec le constructeur Promise, et elle expose une méthode then pour réagir lorsque la
-        promesse est résolue,
-        et une méthode catch pour gérer les erreurs lorsqu'elle est rejetée.
-      </p>
+      <ul>
+        <li>
+          Objet représentant l'achèvement ou l'échec éventuel d'une opération asynchrone.
+          3 était : en attente (pending), résolue (fulfilled) ou rejetée (rejected).
+          Une promesse est créée avec le constructeur Promise, et elle expose une méthode then pour réagir lorsque la
+          promesse est résolue,
+          et une méthode catch pour gérer les erreurs lorsqu'elle est rejetée.
+        </li>
+      </ul>
       <h2>Async et Await</h2>
       <h2>Callback</h2>
-      <p>fonction qui est passée comme argument à une autre fonction et qui est ensuite invoquée à un moment ultérieur
-        dans l'exécution de cette fonction parente, généralement en réponse à un événement ou à une condition
-        spécifique.
-      </p>
-      <h2>Fetch & axios</h2>
-      <p>Get / avec fetch</p>
-      <p>Get / send avec Axios</p>
-      <p>bibliothèque JavaScript qui simplifie l'envoi de requêtes HTTP à partir du navigateur ou de Node.js. Elle
-        utilise les Promesses pour gérer les requêtes asynchrones
-        et facilite la communication avec des serveurs web via les protocoles HTTP et HTTPS. Axios est largement
-        utilisée dans le développement web moderne pour effectuer des
-        requêtes AJAX de manière simple et efficace, en offrant une interface fluide pour envoyer et recevoir des
-        données depuis et vers des serveurs web.</p>
+      <ul>
+        <li>
+          Fonction passée comme argument à une autre fonction et qui est ensuite invoquée à un moment ultérieur
+          dans l'exécution de cette fonction parente, généralement en réponse à un événement ou à une condition
+          spécifique.
+        </li>
+      </ul>
+      <pre style="tab-size: 2" ;>
+          <code>
+// Fonction qui dit bonjour dans différentes langues
+function sayHello(firstName, languageCallback) {
+    console.log(languageCallback(firstName));
+}
+
+// Fonction de rappel pour dire bonjour en anglais
+function sayHelloInEnglish(firstName) {
+    return "Hello, " + firstName + "!";
+}
+
+// Fonction de rappel pour dire bonjour en français
+function sayHelloInFrench(firstName) {
+    return "Bonjour, " + firstName + " !";
+}
+
+// Fonction de rappel pour dire bonjour en espagnol
+function sayHelloInSpanish(firstName) {
+    return "¡Hola, " + firstName + "!";
+}
+
+// Appels de la fonction sayHello avec différentes fonctions de rappel
+sayHello("Alice", sayHelloInEnglish); //Affiche Hello, Alice!
+sayHello("François", sayHelloInFrench); // Affiche Bonjour, François!
+sayHello("Carlos", sayHelloInSpanish); // Affiche ¡Hola, Carlos!
+          </code>
+        </pre>
+      <h2>Fetch</h2>
+      <ul>
+        <li>
+          Bibliothèque JavaScript qui simplifie l'envoi de requêtes HTTP à partir du navigateur ou de Node.js. Elle
+          utilise les Promesses pour gérer les requêtes asynchrones
+        </li>
+        <li>
+          Facilite la communication avec des serveurs web via les protocoles HTTP et HTTPS. Axios est largement
+          utilisée dans le développement web moderne pour effectuer des requêtes AJAX de manière simple et efficace.
+        </li>
+      </ul>
+      <ul>
+        <li>
+          Get avec fetch
+        </li>
+        <pre pre style="tab-size: 2" ;>
+          <code>
+// Appel à une API via fetch
+// Utilisation de l'API jsonplaceholder pour récupérer des données factices d'utilisateurs
+const apiURL = "https://jsonplaceholder.typicode.com/users"
+// Définition de la constante contenant l'URL de l'API
+
+// Envoi d'une requête à l'URL de l'API en utilisant la méthode fetch
+// Cela retourne une promesse qui sera résolue avec la réponse de la requête
+fetch(apiURL)
+//Retourne une promesse qui sera résolue avec la réponse de la requête
+// Le bloc suivant est exécuté lorsque la promesse est résolue (qu'elle soit réussie ou échouée)
+.then(response => {
+  console.log(response)
+
+ // Vérification du statut de la réponse
+// Si le statut n'est pas "ok", une erreur est lancée
+  if(!response.ok) {
+  throw new Error(`Erreur", ${response.status}`)
+  }
+// Extraction des données JSON de la réponse
+  return response.json()
+})
+
+//2ème promesse (enchainement)
+// Ce bloc est exécuté après que les données JSON ont été extraites de la réponse
+// On peut mettre autant de ".then" que l'on veut
+.then(data => {
+  console.log(data)
+  console.log("2ème ", data)
+})
+
+// Ce bloc est exécuté si une erreur survient à n'importe quel moment de la chaîne de promesses
+.catch(e => {
+  console.log(e)
+})
+
+// Affiche
+//Response {url: "https://jsonplaceholder.typicode.com/users", status: 200, ok: true, statusText: "OK", headers: Headers, …}
+//{[Données JSON]}
+//2ème {[Données JSON]}
+          </code>
+        </pre>
+      </ul>
+      <h2>Axios</h2>
+      <ul>
+        <li>
+          Get / send avec Axios
+        </li>
+      </ul>
     </section>
-    <br>
+
     <section id="cookies">
       <h1>Cookies</h1>
       <h2>LocalStorage / SessionStorage</h2>
     </section>
-    <br>
+
+    <section id="modules">
+      <h1>Modules</h1>
+      <h2>Défintion</h2>
+      <ul>
+        <li>
+          Fichier ou partie de code JS qui encapsule une ou plusieurs fonctionnalités liées.
+        </li>
+        <li>
+          L'objectif principal des modules est d'organiser le code en unités autonomes et réutilisables.
+        </li>
+        <li>
+          Les modules favorisent la modularité (no shit), la réutilisabilité et la maintenabilité du code.
+        </li>
+      </ul>
+      <pre style="tab-size: 2">
+        <code>
+// fichier module.js
+// Création des variables
+const age = 45
+let userName = "Luke"
+// Exportation des variables depuis le module
+export {age, userName}
+
+//Création d'une fonction pour un export par défaut
+function foo() {
+  console.log("Hello from module")
+}
+export default foo
+
+//ficher javascript.js
+import {age, userName} from "./module.js";
+console.log(age, userName); // Affiche 45 'Luke'
+
+import foo from "./module.js"
+foo() // Affiche "Hello from module"
+// Il n'y a qu'un seul export par défaut par fichier, + son nom est changeable
+        </code>
+      </pre>
+      <pre style="tab-size: 2" ;>
+        <code>
+// Existe également avec la fonction importat all (*) //
+import * as Utils from "./module.js"
+// Permet d'importer l'intégralité des imports existants //
+        </code>
+      </pre>
+    </section>
+
     <section id="inclassables">
       <h1>Inclassables</h1>
       <h2>Géolocalisation</h2>
@@ -1033,7 +1249,55 @@ const paragraphs = document.querySelectorAll('p');
       <p>Export</p>
       <p>Mode strict</p>
     </section>
-    <br>
+
+    <section id="astuces">
+      <h1>Astuces</h1>
+      <h3>Ajouter une fonction classique / une fonction fléchée </h3>
+      <pre style="tab-size: 2" ;>
+        <code>
+const obj = {
+  feature() {
+    console.log("Hello world!")
+  },
+  arrow: () => {
+    console.log("Hello Solo!")
+  }
+  }
+
+  obj.feature() // Affiche "Hello world!"
+  obj.arrow() // Affiche "Hello Solo!"
+        </code>
+      </pre>
+      <h3>Ajouter facilement des propriétés à un objet</h3>
+      <pre style="tab-size: 2" ;>
+        <code>
+const userName = "Lucie";
+const age = 24;
+
+const user = {
+  userName,
+  age
+}
+console.log(user);
+// Affiche les propriétés qui ont la valeur de la constante
+// Ici "Luice" et "24"
+        </code>
+      </pre>
+      <h3>Utiliser une expression pour créer une prop</h3>
+      <pre style="tab-size: 2" ;>
+        <code>
+let category = "industry";
+const plant = {
+  id: 547,
+  [category]: "Microship"
+}
+console.log(plant);
+// La propriété [category] est crée à partir de la valeur de la variable du même nom
+// Elle affichera "industry"
+        </code>
+      </pre>
+    </section>
+
 
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
@@ -1044,3 +1308,9 @@ const paragraphs = document.querySelectorAll('p');
 </body>
 
 </html>
+<!--
+<pre style="tab-size: 2";>
+  <code>
+  </code>
+</pre>
+      -->
