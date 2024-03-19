@@ -618,10 +618,116 @@
       <div id="cours">
         <h1>Cours</h1>
         <h2>If/else</h2>
+        <ul>
+          <li>
+            Exécute différents blocs de code en fonction d'une condition donnée.
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+  let age = 15;
+
+  if (age >= 18) {
+  console.log("La personne est majeure.");
+  } else if (age >= 13) {
+  console.log("La personne est un adolescent.");
+  } else {
+  console.log("La personne est un enfant.");
+  }
+          </code>
+        </pre>
         <h2>Switch</h2>
+        <ul>
+          <li>
+            Alternative à if/else. Switch est particulièrement utile pour comparer une seule expression avec plusieurs
+            valeurs possibles.
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+  let age = 15;
+
+  switch (age) {
+      case 18:
+          console.log("La personne vient d'atteindre la majorité.");
+          break;
+      case 13:
+          console.log("La personne est un adolescent.");
+          break;
+      default:
+          console.log("La personne est mineure ou d'un autre âge.");
+  }
+          </code>
+        </pre>
         <h2>Or/and</h2>
+        <ul>
+          <li>
+            L'opérateur || retourne true si l'une des expressions est vraie. Si les deux expressions sont fausses, il
+            retourne false
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+  let x = 5;
+  let y = 10;
+
+  if (x === 5 && y === 10) {
+  // Ici on peut changer 10 pour un autre nombre : la valeur de gauche est validé.
+      console.log("Les deux conditions sont vraies.");
+  } else {
+      console.log("Au moins l'une des conditions est fausse.");
+  }
+          </code>
+        </pre>
+        <li>
+          L'opérateur && retourne true si les deux expressions sont vraies. Si l'une des expressions est fausse, il
+          retourne false.
+        </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+  let age = 25;
+  let aUnPermis = true;
+
+  if (age >= 18 && aUnPermis) {
+      console.log("La personne est majeure et a un permis de conduire.");
+  } else {
+      console.log("La personne n'est pas majeure ou n'a pas de permis de conduire.");
+  }
+          </code>
+        </pre>
         <h2>Not/bang operator</h2>
+        <ul>
+          <li>
+            Inverse la valeur d'une expression booléenne.
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+  let fruit = "pomme";
+
+  if (fruit === "banane") {
+      console.log("C'est une banane !");
+  } else {
+      console.log("Ce n'est pas une banane !");
+  }
+          </code>
+        </pre>
         <h2>Conditions ternaires</h2>
+        <ul>
+          <li>
+            Permet d'écrire des instructions conditionnelles de manière concise. Ecrit une condition et son résultat en
+            une seule ligne.
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+  let age = 20;
+  let statut = (age >= 18) ? "majeur" : "mineur";
+
+  console.log("La personne est " + statut + ".");
+          </code>
+        </pre>
       </div>
       <div id="questions">
         <h1>Questions </h1>
@@ -634,11 +740,195 @@
       <div id="cours">
         <h1>Cours</h1>
         <h2>While</h2>
+        <ul>
+          <li>
+            Utilisée pour répéter un bloc de code tant qu'une condition spécifiée est vraie
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+  let somme = 0; // Initialisation de la variable somme à 0
+  let i = 1; // Initialisation de la variable de boucle i à 1
+
+  // Tant que i est inférieur ou égal à 10
+  while (i <= 10) {
+      somme += i; // Ajoute la valeur de i à la somme actuelle
+      i++; // Incrémente i pour passer à la prochaine valeur
+  }
+
+  console.log("La somme des entiers de 1 à 10 est : " + somme);
+          </code>
+        </pre>
         <h2>Do...while</h2>
+        <ul>
+          <li>
+            Dans une boucle do...while, le bloc de code est exécuté une première fois avant de vérifier la condition.
+          </li>
+          <li>
+            Ensuite, si la condition est vraie, le bloc de code est exécuté à nouveau, et cela se répète tant que la
+            condition est vraie.
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+  let result = ''; // Initialise une chaîne vide pour stocker le résultat
+  let i = 0; // Initialise une variable i à 0
+
+  do {
+    i = i + 1; // Incrémente i de 1 à chaque itération
+    result = result + i; // Ajoute la valeur de i à la chaîne result
+  } while (i < 5); // Continue la boucle tant que i est inférieur à 5
+
+  console.log(result);
+          </code>
+        </pre>
         <h2>Boucle for</h2>
-        <h2>Autres boucles</h2>
+        <ul>
+          <li>
+            Structure de contrôle en JavaScript qui permet d'itérer sur une série de valeurs de manière plus concise que
+            la boucle while.
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+  for (initialisation; condition; incrémentation) {
+    // Bloc de code à exécuter à chaque itération
+  }
+  //Initialisation : exécutée une fois avant le démarrage de la boucle. Démarre le compteur.
+  //Condition : évaluée avant chaque itération. Si vraie, le bloc de code à l'intérieur de la boucle est exécuté. Si fausse, la boucle se termine.
+  //Incrémentation : exécutée à la fin de chaque itération. MAJ du compteur de boucle pour la prochaine itération
+          </code>
+        </pre>
+        <pre style="tab-size: 2">
+          <code>
+  let somme = 0;
+  // Initialisation de la variable somme à 0
+
+  for (let i = 1; i <= 10; i++) {
+// initialisation let i =1, condition i <= 10, incrémentation i++
+    somme += i; // Ajoute la valeur de i à la somme actuelle
+  }
+
+  console.log("La somme des entiers de 1 à 10 est : " + somme);
+          </code>
+        </pre>
         <h2>Break</h2>
+        <ul>
+          <li>
+            Termine prématurément une boucle (qu'elle soit for, while, ou do...while) lorsqu'une certaine condition est
+            rencontré.
+          </li>
+          <li>
+            Même si la condition de la boucle n'est pas encore fausse.
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+// Initialisation de la variable nombre à 1
+let nombre = 1;
+
+// Début de la boucle while qui continue tant que nombre est inférieur ou égal à 100
+while (nombre <= 100) {
+  // Vérifie si nombre est à la fois un multiple de 3 et un multiple de 5
+  if (nombre % 3 === 0 && nombre % 5 === 0) {
+    // Affiche un message dans la console indiquant que le premier nombre multiple de 3 et de 5 est trouvé
+    console.log("Le premier nombre multiple de 3 et de 5 est : " + nombre);
+    // Arrête la boucle dès que le nombre est trouvé
+    break;
+  }
+  // Incrémente nombre pour passer au nombre suivant
+  nombre++;
+}
+          </code>
+        </pre>
+        <h2>Continue</h2>
+        <ul>
+          <li>
+            instruction de contrôle de flux utilisée à l'intérieur de boucles (for, while, do...while) pour
+          </li>
+          <li>
+            Permet de passer à l'itération suivante de la boucle immédiatement sans exécuter le reste du code à
+            l'intérieur du bloc de la boucle pour cette itération spécifique.
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+  for (let nombre = 1; nombre <= 10; nombre++) {
+  if (nombre % 3 === 0) {
+  continue; // Passe à l'itération suivante si nombre est un multiple de 3
+  }
+  console.log(nombre);
+  }
+          </code>
+        </pre>
         <h2>Les exceptions</h2>
+        <ul>
+          <li>
+            Le bloc try/catch est utilisé pour gérer les erreurs potentielles qui pourraient survenir lors de
+            l'exécution du code à l'intérieur du bloc try.
+          </li>
+          <li>
+            Le code à l'intérieur du bloc try est susceptible de provoquer une erreur si, par exemple, l'utilisateur
+            entre une réponse invalide dans la boîte de dialogue prompt.
+          </li>
+          <li>
+            Si une erreur se produit à l'intérieur du bloc try, le contrôle est transféré au bloc catch.
+          </li>
+          <li>
+            Le bloc catch attrape l'erreur qui s'est produite et exécute le code à l'intérieur de son bloc. Dans ce cas,
+            il affiche simplement une alerte indiquant l'erreur qui s'est produite.
+          </li>
+          <li>
+            Après l'exécution du bloc catch, le contrôle est transféré au bloc finally.
+          </li>
+          <li>
+            Il est exécuté quoi qu'il arrive, que ce soit après un bloc try réussi ou après un bloc catch exécuté en
+            raison d'une erreur.
+          </li>
+          <li>
+            Le bloc finally affiche une alerte indiquant la fin du programme, indépendamment de s'il y a eu une erreur
+            ou non.
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+try {
+  // Essayer d'exécuter le bloc de code suivant
+  // Demander au joueur de choisir une récompense parmi épée, arc ou haches
+  let recompense = prompt("Choisissez une récompense : épée, arc, haches");
+  let degats; // Déclaration de la variable degats
+
+  // Utiliser un switch pour attribuer des dégâts en fonction de la récompense choisie
+  switch(recompense) {
+    case 'épée':
+      degats = 40; // Si l'épée est choisie, attribuer 40 dégâts
+      break;
+    case 'arc':
+      degats = 30; // Si l'arc est choisie, attribuer 30 dégâts
+      break;
+    case 'haches':
+      degats = 20; // Si les haches sont choisies, attribuer 20 dégâts
+      break;
+    default:
+      // Si le choix de récompense n'est pas valide, déclencher une erreur
+      throw new Error('Vous ne pouvez pas tricher.');
+  }
+
+  // Afficher une alerte indiquant la récompense choisie et les dégâts associés
+  alert('Vous avez choisi : ' + recompense + ' (' + degats + ' dégâts).');
+}
+catch(error) {
+  // Attraper toute erreur qui se produit pendant le bloc try et exécuter le bloc suivant
+  // Afficher une alerte indiquant l'erreur qui s'est produite
+  alert(error);
+}
+finally {
+  // Exécuter ce bloc de code après le bloc try et/ou catch, indépendamment de s'il y a eu une erreur ou non
+  // Afficher une alerte indiquant la fin du programme
+  alert('Fin du programme');
+}
+          </code>
+        </pre>
       </div>
       <div id="questions">
         <h1>Questions </h1>
@@ -721,6 +1011,24 @@
             accessibles qu'à l'intérieur de cette fonction.
           </li>
         </ul>
+        <pre style="tab-size: 2">
+          <code>
+  function process() {
+    let variable1 = "Je suis dans la pile (stack)";
+    // variable1 est une variable primitive de type chaîne de caractères, donc sa valeur est stockée directement dans la pile (stack).
+    let variable2 = { message: "Je suis dans le tas (heap)" };
+    // variable2 est un objet, donc une référence à cet objet est stockée dans la pile (stack), tandis que l'objet lui-même est alloué dans le tas (heap).
+
+    console.log(variable1);
+    // Lors du console.log, la valeur de variable1, qui est dans la pile, est directement accessible et affichée dans la console.
+    console.log(variable2.message)
+    // Lors du console.log, la référence à l'objet variable2 est d'abord lue depuis la pile,
+    // puis l'objet lui-même est accédé dans le tas pour récupérer sa propriété message, qui est ensuite affichée dans la console.
+  }
+
+  process();
+          </code>
+        </pre>
       </div>
       <div id="questions">
         <h1>Questions </h1>
@@ -733,16 +1041,71 @@
       <div id="cours">
         <h1>Cours </h1>
         <h2>Tableau simple</h2>
+        <pre style="tab-size: 2">
+          <code>
+
+          </code>
+        </pre>
         <h2>Tableau à plusieurs dimensions</h2>
+        <pre style="tab-size: 2">
+          <code>
+
+          </code>
+        </pre>
         <h2>Tableau associatif</h2>
+        <pre style="tab-size: 2">
+          <code>
+
+          </code>
+        </pre>
         <h2>Accèder à un élément index/length</h2>
+        <pre style="tab-size: 2">
+          <code>
+
+          </code>
+        </pre>
         <h2>Accèder à un élément push/unshift</h2>
+        <pre style="tab-size: 2">
+          <code>
+
+          </code>
+        </pre>
         <h2>Retirer un élément pop/shift</h2>
+        <pre style="tab-size: 2">
+          <code>
+
+          </code>
+        </pre>
         <h2>Retrouver un élement grâce à sa valeur</h2>
+        <pre style="tab-size: 2">
+          <code>
+
+          </code>
+        </pre>
         <h2>Concaténer pour afficher(join)</h2>
+        <pre style="tab-size: 2">
+          <code>
+
+          </code>
+        </pre>
         <h2>Splice : ajouter/remplacer/supprimer</h2>
+        <pre style="tab-size: 2">
+          <code>
+
+          </code>
+        </pre>
         <h2>Les boulces (for...in)</h2>
+        <pre style="tab-size: 2">
+          <code>
+
+          </code>
+        </pre>
         <h2>Les boucle (for...of)</h2>
+        <pre style="tab-size: 2">
+          <code>
+
+          </code>
+        </pre>
         <h2>Méthode .forEeach</h2>
         <ul>
           <li>
