@@ -33,10 +33,10 @@
       <li><a href="#tableaux">Tableaux</a></li>
       <li><a href="#objets">Objets JS</a></li>
       <li><a href="#BOM">BOM (Browser Oriented Model)</a></li>
-      <li><a href="#DOM">BOM (Document Oriented Model)</a></li>
-      <li><a href="#évènements">Evénements</a></li>
+      <li><a href="#DOM">DOM (Document Oriented Model)</a></li>
+      <li><a href="#événements">Evénements</a></li>
       <li><a href="#POO">POO</a></li>
-      <li><a href="#date">Date</a></li>
+      <li><a href="#date">Dates</a></li>
       <li><a href="#API">API</a></li>
       <li><a href="#asynchrone">Asynchrone</a></li>
       <li><a href="#cookies">Cookies</a></li>
@@ -59,20 +59,20 @@
         </ul>
         <pre style="tab-size: 2;">
           <code>
-// Nombre :
-42, 3.14
-// Chaîne de caractères (String) :
-"Hello, World!"
-//Booléen :
-true, false
-// Null :
-null
-//Undefined :
-undefined
-//Symbol :
-Symbol('foo')
-//Big int :
-const monBigInt = BigInt(12345678901234567890);
+  // Nombre :
+  42, 3.14
+  // Chaîne de caractères (String) :
+  "Hello, World!"
+  //Booléen :
+  true, false
+  // Null :
+  null
+  //Undefined :
+  undefined
+  //Symbol :
+  Symbol('foo')
+  //Big int :
+  const monBigInt = BigInt(12345678901234567890);
           </code>
         </pre>
 
@@ -85,16 +85,16 @@ const monBigInt = BigInt(12345678901234567890);
         </ul>
         <pre style="tab-size: 2;">
           <code>
-// Objet
-{ nom: "John", âge: 30 }
-// Fonction
-function additionner(a, b) { return a + b; }
-//Date :
-new Date()
-//Expression régulière (RegExp) :
-/[a-z]+/
-//Erreur :
-new Error('Une erreur est survenue')
+  // Objet
+  { nom: "John", âge: 30 }
+  // Fonction
+  function additionner(a, b) { return a + b; }
+  //Date :
+  new Date()
+  //Expression régulière (RegExp) :
+  /[a-z]+/
+  //Erreur :
+  new Error('Une erreur est survenue')
           </code>
         </pre style="tab-size: 2;">
         <h2>Copie partielle / profonde</h2>
@@ -118,26 +118,26 @@ new Error('Une erreur est survenue')
         </ul>
         <pre style="tab-size: 2;">
           <code>
-// Création de l'objet original
-let personnageOriginal = {
-    nom: "Ezio",
-    niveau: 50,
-    pointsDeVie: 100
-};
+  // Création de l'objet original
+  let personnageOriginal = {
+      nom: "Ezio",
+      niveau: 50,
+      pointsDeVie: 100
+  };
 
-// Copie partielle de l'objet
-let copiePartielle = personnageOriginal;
+  // Copie partielle de l'objet
+  let copiePartielle = personnageOriginal;
 
-// Modification de la copie
-copiePartielle.pointsDeVie = 80;
+  // Modification de la copie
+  copiePartielle.pointsDeVie = 80;
 
-// Affichage des valeurs originales
-console.log("Valeurs originales :");
-console.log(personnageOriginal);
+  // Affichage des valeurs originales
+  console.log("Valeurs originales :");
+  console.log(personnageOriginal);
 
-// Affichage des valeurs de la copie
-console.log("Valeurs de la copie après modification :");
-console.log(copiePartielle);
+  // Affichage des valeurs de la copie
+  console.log("Valeurs de la copie après modification :");
+  console.log(copiePartielle);
           </code>
         </pre style="tab-size: 2;">
         <ul>
@@ -147,10 +147,10 @@ console.log(copiePartielle);
         </ul>
         <pre style="tab-size: 2;">
           <code>
-Valeurs originales :
-{ nom: 'Ezio', niveau: 50, pointsDeVie: 80 }
-Valeurs de la copie après modification :
-{ nom: 'Ezio', niveau: 50, pointsDeVie: 80 }
+  Valeurs originales :
+  { nom: 'Ezio', niveau: 50, pointsDeVie: 80 }
+  Valeurs de la copie après modification :
+  { nom: 'Ezio', niveau: 50, pointsDeVie: 80 }
           </code>
         </pre>
       </div>
@@ -172,9 +172,9 @@ Valeurs de la copie après modification :
         </ul>
         <pre>
           <code>
-var nom = "Jean"; // Scope global, obsolète.
-let age = 30; // locale au bloc de code dans lequel elle est déclarée. Peut être redéclarée.
-const pi = 3.14; // ne peut pas être redéclarée
+  var nom = "Jean"; // Scope global, obsolète.
+  let age = 30; // locale au bloc de code dans lequel elle est déclarée. Peut être redéclarée.
+  const pi = 3.14; // ne peut pas être redéclarée
           </code>
         </pre>
 
@@ -184,10 +184,10 @@ const pi = 3.14; // ne peut pas être redéclarée
         </ul>
         <pre>
           <code>
-chaine1 = "Bonjour"
-chaine2 = "monde"
-concatenation = chaine1 + " " + chaine2
-afficher(concatenation) // Cela affichera "Bonjour monde"
+  chaine1 = "Bonjour"
+  chaine2 = "monde"
+  concatenation = chaine1 + " " + chaine2
+  afficher(concatenation) // Cela affichera "Bonjour monde"
           </code>
         </pre>
         <h2>Portée des variables</h2>
@@ -198,18 +198,18 @@ afficher(concatenation) // Cela affichera "Bonjour monde"
         </ul>
         <pre>
           <code>
-// Portée globale
-const globalConst = "Je suis une constante globale";
-let globalLet = "Je suis une variable globale";
+  // Portée globale
+  const globalConst = "Je suis une constante globale";
+  let globalLet = "Je suis une variable globale";
 
-function exampleFunction() {
-    // Portée locale à la fonction exampleFunction
-    const localConst = "Je suis une constante locale";
-    let localLet = "Je suis une variable locale";
-//console.log ici aura accès à toutes les variables
-}
-//console.log ici n'aura accès qu'au variables globales
-// Pas à celles définies à l'intérieur de la fonction exempleFunction
+  function exampleFunction() {
+      // Portée locale à la fonction exampleFunction
+      const localConst = "Je suis une constante locale";
+      let localLet = "Je suis une variable locale";
+  //console.log ici aura accès à toutes les variables
+  }
+  //console.log ici n'aura accès qu'au variables globales
+  // Pas à celles définies à l'intérieur de la fonction exempleFunction
           </code>
         </pre>
 
@@ -250,7 +250,7 @@ function exampleFunction() {
           </code>
         </pre>
 
-        <h2>les Closures</h2>
+        <h2>Closures</h2>
         <ul>
           <li>
             Fonction interne qui a accès aux variables de son scope parent, même après que la fonction
@@ -261,33 +261,33 @@ function exampleFunction() {
             la fin de l'exécution de la fonction parent.
           </li>
         </ul>
-        <pre>
+        <pre style="tab-size: 2;">
           <code>
-function creerCompteur() {
-  // Déclare une variable compteur et l'initialise à 0
-  let compteur = 0;
+  function creerCompteur() {
+    // Déclare une variable compteur et l'initialise à 0
+    let compteur = 0;
 
-  // Déclare une fonction interne incrementer
-  function incrementer() {
-      // Incrémente la variable compteur à chaque appel
-      compteur++;
-      // Affiche la valeur actuelle de compteur dans la console
-      console.log(compteur);
+    // Déclare une fonction interne incrementer
+    function incrementer() {
+        // Incrémente la variable compteur à chaque appel
+        compteur++;
+        // Affiche la valeur actuelle de compteur dans la console
+        console.log(compteur);
+    }
+
+    // Renvoie la fonction incrementer
+    return incrementer;
   }
+  // Appelle creerCompteur et stocke la fonction retournée dans monCompteur
+  let monCompteur = creerCompteur();
+  // IMPORTANT, c'est cette assignation qui crée la closure,
+  // Elle établit le lien entre l'environnement lexical de la fonction interne...
+  //...et son utilisation en dehors de ce contexte."
 
-  // Renvoie la fonction incrementer
-  return incrementer;
-}
-// Appelle creerCompteur et stocke la fonction retournée dans monCompteur
-let monCompteur = creerCompteur();
-// IMPORTANT, c'est cette assignation qui crée la closure,
-// Elle établit le lien entre l'environnement lexical de la fonction interne...
-//...et son utilisation en dehors de ce contexte."
-
-// Appelle la fonction stockée dans monCompteur (incrementer) plusieurs fois
-monCompteur(); // Affiche 1
-monCompteur(); // Affiche 2
-monCompteur(); // Affiche 3
+  // Appelle la fonction stockée dans monCompteur (incrementer) plusieurs fois
+  monCompteur(); // Affiche 1
+  monCompteur(); // Affiche 2
+  monCompteur(); // Affiche 3
           </code>
         </pre>
       </div>
@@ -298,517 +298,628 @@ monCompteur(); // Affiche 3
       </div>
     </section>
 
-
-
     <section id="fenêtres/interactions">
       <h1>Fenêtre et interactions</h1>
       <div class="cours">
-        <h1>Demander / afficher des infos aux utilisateurs</h1>
-        <h2>Afficher info</h2>
-        <h2>Demander info</h2>
-        <h2>Demander confirmation</h2>
-        <h2>Demander des renseignements</h2>
+        <h1>Cours</h1>
+        <h2>Fenêtres modales</h2>
+        <pre style="tab-size: 2;">
+          <code>
+  alert("Ceci est un message d'alerte !");
+  //Affiche une fenêtre modale dans le navigateur avec le message d'alerte
+
+  let nom = prompt("Entrez votre nom :");
+  alert("Bonjour, " + nom + " !");
+  //Demande à l'utilisateur d'entrer son nom
+
+  let resultat = confirm("Êtes-vous sûr de vouloir continuer ?");
+  if (resultat) {
+      alert("Action confirmée !");
+  } else {
+      alert("Action annulée !");
+  }
+  //Demande à l'utilisateur de confirmer ou d'annuler une action.
+            </code>
+        </pre>
       </div>
       <div id="questions">
         <h1>Questions </h1>
         <h2><a href="quiz_js.html">Lien quizz fenêtres et interactions</a></h2>
       </div>
-
     </section>
 
     <section id="fonctions">
       <h1>Les fonctions</h1>
-      <h2>Qu'est-ce qu'une fonction</h2>
-      <ul>
-        <li>
-          Bloc de code qui peut être appelé et exécuté pour effectuer une tâche spécifique ou renvoyer une valeur.
-        </li>
-      </ul>
-      <pre>
-        <code style="tab-size: 2;">
-function messageBienvenue() {
-  return "Bonjour, c'est le site de François";
-}
+      <div class="cours">
+        <h1>Cours</h1>
+        <h2>Qu'est-ce qu'une fonction</h2>
+        <ul>
+          <li>
+            Bloc de code qui peut être appelé et exécuté pour effectuer une tâche spécifique ou renvoyer une valeur.
+          </li>
+        </ul>
+        <pre>
+          <code style="tab-size: 2;">
+  function messageBienvenue() {
+    return "Bonjour, c'est le site de François";
+  }
 
-// Appel de la fonction messageBienvenue
-let message = messageBienvenue();
+  // Appel de la fonction messageBienvenue
+  let message = messageBienvenue();
 
-console.log(message); // Affiche "Bonjour, c'est le site de François"
-        </code>
-      </pre>
-      <h2>Paramètres</h2>
-      <p>
-      <ul>
-        <li>Paramètre : quand on crée la fonction</li>
-        <li>Argument : quand on passe un élément dans le paramètre</li>
-      </ul>
-      <pre style="tab-size: 2;">
-        <code>
+  console.log(message); // Affiche "Bonjour, c'est le site de François"
+          </code>
+        </pre>
+        <h2>Paramètres</h2>
+        <p>
+        <ul>
+          <li>Paramètre : quand on crée la fonction</li>
+          <li>Argument : quand on passe un élément dans le paramètre</li>
+        </ul>
+        <pre style="tab-size: 2;">
+            <code>
   function addition(a, b) {
     return a + b;
-}
-// Ici a et b sont des paramètres
+  }
+  // Ici a et b sont des paramètres
 
-let resultat = addition(3, 5);
-// Ici 6 et 6 sont des arguments passés aux paramètres a et b
-        </code>
-      </pre>
-      </p>
-      <h2>Types de fonctions</h2>
-      <h3>fonctions classique</h3>
-      <p>
-      <ul>
-        <li>Possèdent un "this", sorte de variable disponible dans le contexte de la fonction.</li>
-      </ul>
-      </p>
-      <pre style="tab-size: 2;">
+  let resultat = addition(3, 5);
+  // Ici 6 et 6 sont des arguments passés aux paramètres a et b
+            </code>
+          </pre>
+        </p>
+        <h2>Types de fonctions</h2>
+        <h3>fonctions classique</h3>
+        <p>
+        <ul>
+          <li>Possèdent un "this", sorte de variable disponible dans le contexte de la fonction.</li>
+        </ul>
+        </p>
+        <pre style="tab-size: 2;">
           <code>
   function standardFunction(x, y) {
     return x + y;
-}
-standardFunction(6,6) // affiche 12
+  }
+  standardFunction(6,6) // affiche 12
           </code>
         </pre>
-      <h3>fonctions nommées</h3>
-      <ul>
-        <li>
-          Les fonctions nommées peuvent être appelées à l'intérieur de leur propre définition (récursivité)
-        </li>
-      </ul>
-      <pre style="tab-size: 2;">
-        <code>
+        <h3>fonctions nommées</h3>
+        <ul>
+          <li>
+            Les fonctions nommées peuvent être appelées à l'intérieur de leur propre définition (récursivité)
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
+          <code>
   function namedFunction(x, y) {
     return x * y;
-}
-namedFunction(6,6) // affiche 36
-        </code>
-      </pre>
-      <h3>fonctions anonymes</h3>
-      <ul>
-        <li>
-          Les fonctions anonymes doivent être stockées dans une variable ou passées comme argument à une autre fonction
-          pour être utilisées.
-        </li>
-      </ul>
-      <pre style="tab-size: 2;">
-        <code>
+  }
+  namedFunction(6,6) // affiche 36
+          </code>
+        </pre>
+        <h3>fonctions anonymes</h3>
+        <ul>
+          <li>
+            Les fonctions anonymes doivent être stockées dans une variable ou passées comme argument à une autre
+            fonction
+            pour être utilisées.
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
+          <code>
   let anonymousFunction = function() {
     console.log("Je suis une fonction anonyme !");
-};
-anonymousFunction(); // Affiche "Je suis une fonction anonyme"
-        </code>
-      </pre>
-      <h3>fonctions fléchées</h3>
-      <p>
-      <ul>
-        <li>N'utilisant pas this autonome </li>
-        <li>Peuvent lire le this d'une fonction classique si elles se
-          situent dedans.</li>
-        <li>Lisent le .this du contexte global de la fonction</li>
-        <li>Elles utilisent l'opérateur => pour définir la fonction.</li>
-      </ul>
-      </p>
-      <pre style="tab-size: 2;">
-        <code>
-// Définition d'une fonction fléchée pour multiplier deux nombres
-const multiplier = (a, b) => a * b;
-
-// Utilisation de la fonction fléchée pour calculer le produit de deux nombres
-const resultat = multiplier(5, 3);
-console.log("Le résultat est : " + resultat);
-// Affiche : "Le résultat est : 15"
-        </code>
-      </pre>
-      <h3>Fonctions pures</h3>
-      <p>
-      <ul>
-        <li>Retournent toujours la même chose en fonction des mêmes arguments fournis.</li>
-        <li>N'utilise aucune valeur mutable et n'a pas d'effets secondaires en dehors de son bloc.</li>
-        <li>Le résultat ne doit pas changer par rapport à une variable externe</li>
-      </ul>
-      </p>
-      <pre style="tab-size: 2;">
+  };
+  anonymousFunction(); // Affiche "Je suis une fonction anonyme"
+          </code>
+        </pre>
+        <h3>fonctions fléchées</h3>
+        <p>
+        <ul>
+          <li>N'utilisant pas this autonome </li>
+          <li>Peuvent lire le this d'une fonction classique si elles se
+            situent dedans.</li>
+          <li>Lisent le .this du contexte global de la fonction</li>
+          <li>Elles utilisent l'opérateur => pour définir la fonction.</li>
+        </ul>
+        </p>
+        <pre style="tab-size: 2;">
             <code>
-function add(a,b) {
-  return a + b
-}
-console.log(add(10,10))
-//Ici la fonction add renvera toujours le même résultat.
+  // Définition d'une fonction fléchée pour multiplier deux nombres
+  const multiplier = (a, b) => a * b;
 
-const number = 99
-function add(a,b) {
-  number++
-  return a + b
-}
-console.log(add(10,10))
-// Ici on a un effet secondaire car on change un élément en déhors de la fonction
+  // Utilisation de la fonction fléchée pour calculer le produit de deux nombres
+  const resultat = multiplier(5, 3);
+  console.log("Le résultat est : " + resultat);
+  // Affiche : "Le résultat est : 15"
             </code>
-      </pre>
-      <h3>Fonctions d'ordre supérieur</h3>
-      <p>
-      <ul>
-        <li>Une fonction d'ordre supérieur est une fonction qui prend en argument une autre fonction ou/et qui retourne
-          une
-          fonction.
-        </li>
-        <li>
-          Permet code réutilisable, flexible et permet des abstactrions puissantes.
-        </li>
-      </ul>
-      </p>
-      <pre style="tab-size: 2;">
-        <code>
-// Je déclare ma fonction d'ordre supérieur customFilter avec les paramètres "arr" (un tableau) et "callback" (une fonction)
-function customFilter(arr, callback) {
-// Je crée un tableau vide dans lequel je stockerai les éléments filtrés
-  const filteredArray = []
-// Je parcours chaque élément de l'array "arr" en utilisant une boucle for
-  for (let i = 0; i < arr.length; i++) {
-// Je vérifie si l'élément actuel de l'array "arr" satisfait la condition définie par le callback
-    if (callback(arr[i])) {
-// Si la condition est vraie, j'ajoute cet élément au tableau filtré
-      filteredArray.push(arr[i])
-    }
+          </pre>
+        <h3>Fonctions pures</h3>
+        <p>
+        <ul>
+          <li>Retournent toujours la même chose en fonction des mêmes arguments fournis.</li>
+          <li>N'utilise aucune valeur mutable et n'a pas d'effets secondaires en dehors de son bloc.</li>
+          <li>Le résultat ne doit pas changer par rapport à une variable externe</li>
+        </ul>
+        </p>
+        <pre style="tab-size: 2;">
+            <code>
+  function add(a,b) {
+    return a + b
   }
-// Je retourne le tableau filtré une fois la boucle terminée
-  return filteredArray
-}
+  console.log(add(10,10))
+  //Ici la fonction add renvera toujours le même résultat.
 
-// J'initialise un tableau "salaries" contenant différents salaires
-const salaries = [1200, 5000, 4000, 2500, 3450, 1800]
+  const number = 99
+  function add(a,b) {
+    number++
+    return a + b
+  }
+  console.log(add(10,10))
+  // Ici on a un effet secondaire car on change un élément en déhors de la fonction
+            </code>
+          </pre>
+        <h3>Fonctions d'ordre supérieur</h3>
+        <p>
+        <ul>
+          <li>Une fonction d'ordre supérieur est une fonction qui prend en argument une autre fonction ou/et qui
+            retourne
+            une
+            fonction.
+          </li>
+          <li>
+            Permet code réutilisable, flexible et permet des abstactrions puissantes.
+          </li>
+        </ul>
+        </p>
+        <pre style="tab-size: 2;">
+            <code>
+  // Je déclare ma fonction d'ordre supérieur customFilter avec les paramètres "arr" (un tableau) et "callback" (une fonction)
+  function customFilter(arr, callback) {
+    // Je crée un tableau vide dans lequel je stockerai les éléments filtrés
+    const filteredArray = []
+    // Je parcours chaque élément de l'array "arr" en utilisant une boucle for
+    for (let i = 0; i < arr.length; i++) {
+      // Je vérifie si l'élément actuel de l'array "arr" satisfait la condition définie par le callback
+      if (callback(arr[i])) {
+        // Si la condition est vraie, j'ajoute cet élément au tableau filtré
+        filteredArray.push(arr[i])
+      }
+    }
+    // Je retourne le tableau filtré une fois la boucle terminée
+    return filteredArray
+  }
 
-// J'affiche le résultat de l'appel à la fonction customFilter avec "salaries" comme tableau et une fonction de callback
-// qui vérifie si chaque élément (salaire) est supérieur à 3000
-console.log(customFilter(salaries, salary => salary > 3000));
-        </code>
-      </pre>
-      <h3>Expression de fonction</h3>
-      <ul>
-        <li>
-          Une expression de fonction en JavaScript est une manière de définir une fonction en tant qu'expression.
-        </li>
-        <li>
-          Elle peut être stockée dans une variable, passée comme argument à une autre fonction ou retournée par une
-          autre fonction.
-        </li>
-      </ul>
-      <pre style="tab-size: 2;">
-        <code>
+  // J'initialise un tableau "salaries" contenant différents salaires
+  const salaries = [1200, 5000, 4000, 2500, 3450, 1800]
+
+  // J'affiche le résultat de l'appel à la fonction customFilter avec "salaries" comme tableau et une fonction de callback
+  // qui vérifie si chaque élément (salaire) est supérieur à 3000
+  console.log(customFilter(salaries, salary => salary > 3000));
+            </code>
+          </pre>
+        <h3>Expression de fonction</h3>
+        <ul>
+          <li>
+            Une expression de fonction en JavaScript est une manière de définir une fonction en tant qu'expression.
+          </li>
+          <li>
+            Elle peut être stockée dans une variable, passée comme argument à une autre fonction ou retournée par une
+            autre fonction.
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
+            <code>
   let maFonction = function() {
     console.log("Je suis une expression de fonction !");
-};
-        </code>
-      </pre>
-      <h3>Paramètres par défaut</h3>
-      <ul>
-        <li>
-          Définit une valeur par défaut si un argument correspondant au paramètre en question n'est pas fourni.
-        </li>
-      </ul>
-      <pre style="tab-size: 2" ;>
-        <code>
-function welcoming(userName = "visiteur"){
-  return `Bienvenue, ${userName}.`
-}
-console.log(welcoming("Paul"));
-console.log(welcoming("Sara"));
-console.log(welcoming());
-// Ici le paramètre par défaut "visiteur" apparait si aucun UserName n'est définit.
-        </code>
-      </pre>
-      <h3>Fonctions déjà existantes</h3>
-      <ul>
-        <li>
-          Javascript possède nombre de fonction déjà existantes, par exemple :
-        </li>
-        <li>Math</li>
-      </ul>
-      <pre>
-          <code style="tab-size: 2";>
-Math.round(2.4); // Retourne 2
-Math.sqrt(16);   // Retourne 4
-Math.cos(Math.PI); // Retourne -1
-          </code>
-        </pre>
-      <ul>
-        <li>Arry</li>
-        <li>Fonction pour opérer dans les tableaux : push, pop, forEach, map, filter, reduce ect...</li>
-      </ul>
-      <pre>
-          <code style="tab-size: 2";>
-let fruits = ["Pomme", "Banane", "Orange"];
-fruits.push("Fraise"); // Ajoute "Fraise" à la fin du tableau
-fruits.forEach(fruit => console.log(fruit)); // Affiche chaque élément du tableau
-          </code>
-        </pre>
-      <ul>
-        <li>String</li>
-        <li>
-          Fournit des fonctions pour manipuler des chaînes de caractères, telles que charAt, substring, indexOf,
-          toUpperCase, etc.
-        </li>
-      </ul>
-      <pre>
-          <code style="tab-size: 2";>
-let message = "Bonjour le monde";
-console.log(message.charAt(0)); // Affiche "B"
-console.log(message.indexOf("le")); // Affiche
-          </code>
-        </pre>
-      <ul>
-        <li>Date</li>
-        <li>
-          fournit des fonctions pour travailler avec les dates et les heures, telles que getFullYear, getMonth, getDate,
-          getHours, etc.
-        </li>
-      </ul>
-      <pre>
-          <code style="tab-size: 2";>
-let aujourdHui = new Date();
-console.log(aujourdHui.getFullYear()); // Affiche l'année actuelle
-          </code>
-        </pre>
-      <h3>Recursivité</h3>
-      <ul>
-        <li>
-          Fonction qui s'apppelle elle-même
-        </li>
-      </ul>
-      <pre style="tab-size: 2">
-          <code>
-function somme(n) {
-  // Condition de base : si n est égal à 1, retourne 1
-  if (n === 1) {
-      return 1;
+  };
+            </code>
+          </pre>
+        <h3>Paramètres par défaut</h3>
+        <ul>
+          <li>
+            Définit une valeur par défaut si un argument correspondant au paramètre en question n'est pas fourni.
+          </li>
+        </ul>
+        <pre style="tab-size: 2" ;>
+            <code>
+  function welcoming(userName = "visiteur"){
+    return `Bienvenue, ${userName}.`
   }
-  // Récurse : ajoute n à la somme des nombres de 1 à n-1
-  return n + somme(n - 1);
-}
+  console.log(welcoming("Paul"));
+  console.log(welcoming("Sara"));
+  console.log(welcoming());
+  // Ici le paramètre par défaut "visiteur" apparait si aucun UserName n'est définit.
+            </code>
+          </pre>
+        <h3>Fonctions déjà existantes</h3>
+        <ul>
+          <li>
+            Javascript possède nombre de fonction déjà existantes, par exemple :
+          </li>
+          <li>Math</li>
+        </ul>
+        <pre>
+            <code style="tab-size: 2";>
+  Math.round(2.4); // Retourne 2
+  Math.sqrt(16);   // Retourne 4
+  Math.cos(Math.PI); // Retourne -1
+            </code>
+          </pre>
+        <ul>
+          <li>Arry</li>
+          <li>Fonction pour opérer dans les tableaux : push, pop, forEach, map, filter, reduce ect...</li>
+        </ul>
+        <pre>
+            <code style="tab-size: 2";>
+  let fruits = ["Pomme", "Banane", "Orange"];
+  fruits.push("Fraise"); // Ajoute "Fraise" à la fin du tableau
+  fruits.forEach(fruit => console.log(fruit)); // Affiche chaque élément du tableau
+            </code>
+          </pre>
+        <ul>
+          <li>String</li>
+          <li>
+            Fournit des fonctions pour manipuler des chaînes de caractères, telles que charAt, substring, indexOf,
+            toUpperCase, etc.
+          </li>
+        </ul>
+        <pre>
+            <code style="tab-size: 2";>
+  let message = "Bonjour le monde";
+  console.log(message.charAt(0)); // Affiche "B"
+  console.log(message.indexOf("le")); // Affiche
+            </code>
+          </pre>
+        <ul>
+          <li>Date</li>
+          <li>
+            fournit des fonctions pour travailler avec les dates et les heures, telles que getFullYear, getMonth,
+            getDate,
+            getHours, etc.
+          </li>
+        </ul>
+        <pre>
+            <code style="tab-size: 2";>
+  let aujourdHui = new Date();
+  console.log(aujourdHui.getFullYear()); // Affiche l'année actuelle
+            </code>
+          </pre>
+        <h3>Recursivité</h3>
+        <ul>
+          <li>
+            Fonction qui s'apppelle elle-même
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+            <code>
+  function somme(n) {
+    // Condition de base : si n est égal à 1, retourne 1
+    if (n === 1) {
+      return 1;
+    }
+    // Récurse : ajoute n à la somme des nombres de 1 à n-1
+    return n + somme(n - 1);
+  }
 
-// Exemple d'utilisation de la fonction somme
-console.log(somme(5)); // Affiche 15 (car 1 + 2 + 3 + 4 + 5 = 15)
-          </code>
-        </pre>
-
+  // Exemple d'utilisation de la fonction somme
+  console.log(somme(5)); // Affiche 15 (car 1 + 2 + 3 + 4 + 5 = 15)
+            </code>
+          </pre>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz fonctions</a></h2>
+      </div>
     </section>
+
     <section id="logique">
-      <h1>4 - La logique</h1>
-      <h2>If/else</h2>
-      <h2>Switch</h2>
-      <h2>Or/and</h2>
-      <h2>Not/bang operator</h2>
-      <h2>Conditions ternaires</h2>
+      <h1>Logique</h1>
+      <div id="cours">
+        <h1>Cours</h1>
+        <h2>If/else</h2>
+        <h2>Switch</h2>
+        <h2>Or/and</h2>
+        <h2>Not/bang operator</h2>
+        <h2>Conditions ternaires</h2>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz logique</a></h2>
+      </div>
     </section>
-    <br>
+
     <section id="boucles">
-      <h1>5 - Les boucles</h1>
-      <h2>While</h2>
-      <h2>Do...while</h2>
-      <h2>Boucle for</h2>
-      <h2>Autres boucles</h2>
-      <h2>Break</h2>
-      <h2>Les exceptions</h2>
+      <h1>Les boucles</h1>
+      <div id="cours">
+        <h1>Cours</h1>
+        <h2>While</h2>
+        <h2>Do...while</h2>
+        <h2>Boucle for</h2>
+        <h2>Autres boucles</h2>
+        <h2>Break</h2>
+        <h2>Les exceptions</h2>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz logique</a></h2>
+      </div>
     </section>
-    <br>
+
     <section id="mémoire">
-      <h1>Emplacements de mémoire</h1>
-      <h2>Heap</h2>
-      <p>Espace de mémoire principal ou les objets, tableau et structures JS sont stockés</p>
-      <h2>Stack</h2>
-      <p>Stocke les variables locales et les références de fonction</p>
-      <h2>Contexte d'éxecution</h2>
-      <p>Global : quand le script se fait analyser / toutes les déclations de fonctions et de variables y sont hissées
-      </p>
+      <h1>Mémoire</h1>
+      <div id="cours">
+        <h1>Cours </h1>
+        <h2>Emplacements de mémoire</h2>
+        <h3>Heap (tas)</h3>
+        <ul>
+          <li>
+            Zone de mémoire plus dynamique et flexible, utilisée pour stocker des données de taille variable et dont la
+            durée de vie n'est pas forcément liée à la durée de vie de la fonction qui les a créées.
+          </li>
+          <li>
+            C'est là que sont généralement allouées les données structurées dynamiquement, telles que les objets et les
+            tableaux.
+          </li>
+          <br>
+          <li>
+            Fonctionnement : L'allocation et la libération de mémoire dans le tas sont plus complexes que dans la pile.
+            Les données sont allouées dynamiquement lorsqu'elles sont créées et libérées lorsque leur référence n'est
+            plus nécessaire.
+          </li>
+          <br>
+          <li>
+            Usage : Le tas est utilisé pour stocker des données de taille dynamique ou pour des données dont la durée de
+            vie est imprévisible, comme les objets et les tableaux de taille variable.
+          </li>
+        </ul>
+        <h3>Stack (pile)</h3>
+        <ul>
+          <li>
+            La pile est une structure de données linéaire de type LIFO (Last In, First Out).
+          </li>
+          <li>
+            Signifie que le dernier élément ajouté à la pile est le premier à être retiré. C'est là que sont stockées
+            les variables locales et les informations de contexte d'exécution lors de l'appel de fonctions dans un
+            programme.
+          </li>
+          <br>
+          <li>
+            Fonctionnement : Lorsqu'une fonction est appelée, un nouvel "appel de fonction" est ajouté au sommet de la
+            pile, contenant les paramètres de la fonction et les variables locales.
+          </li>
+          <li>
+            Lorsque la fonction se termine, son "appel de fonction" est retiré de la pile et le contrôle retourne à
+            l'endroit où la fonction a été appelée.
+          </li>
+          <br>
+          <li>
+            Usage : La pile est généralement utilisée pour gérer l'exécution des fonctions et pour stocker des données
+            de petite taille avec une durée de vie prévisible, comme les variables locales.
+          </li>
+        </ul>
+        <h3>Contexte d'éxecution local/variable</h3>
+        <ul>
+          <li>
+            Global : Le contexte d'exécution global est le cadre principal dans lequel le code JavaScript est exécuté
+            lorsque la
+            page se charge.
+          </li>
+          <li>
+            Dans ce contexte, les variables et les fonctions sont déclarées en dehors de toutes les fonctions.
+          </li>
+          <li>
+            Les variables déclarées dans ce contexte deviennent des propriétés de l'objet global (généralement window
+            dans les navigateurs).
+          </li>
+          <br>
+          <li>
+            Local : Le contexte d'exécution local est créé chaque fois qu'une fonction est appelée.
+          </li>
+          <li>
+            Dans ce contexte, les variables déclarées à l'intérieur d'une fonction (avec let, const ou var) ne sont
+            accessibles qu'à l'intérieur de cette fonction.
+          </li>
+        </ul>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz mémoire</a></h2>
+      </div>
     </section>
-    <br>
+
     <section id="tableaux">
       <h1>Les tableaux</h1>
-      <h2>Tableau simple</h2>
-      <p>...</p>
-      <h2>Tableau à plusieurs dimensions</h2>
-      <p>...</p>
-      <h2>Tableau associatif</h2>
-      <p>...</p>
-      <h2>Accèder à un élément index/length</h2>
-      <p>...</p>
-      <h2>Accèder à un élément push/unshift</h2>
-      <p>...</p>
-      <h2>Retirer un élément pop/shift</h2>
-      <p>...</p>
-      <h2>Retrouver un élement grâce à sa valeur</h2>
-      <p>...</p>
-      <h2>Concaténer pour afficher(join)</h2>
-      <h2>Splice : ajouter/remplacer/supprimer</h2>
-      <h2>Les boulces (for...in)</h2>
-      <h2>Les boucle (for...of)</h2>
-      <h2>Méthode .forEeach</h2>
-      <ul>
-        <li>
-          Cette méthode prend en argument une fonction de rappel (callback) qui sera exécutée pour chaque élément du
-          tableau.
-        </li>
-        <li>
-          Le callback peut recevoir jusqu'à trois arguments : l'élément actuel, l'index de l'élément et le tableau sur
-          lequel forEach() a été appelé.
-        </li>
-        <li>
-          Itère sur l'objet original contrairement à .map qui créer un nouvel objet.
-        </li>
-      </ul>
-      <pre style="tab-size: 2;">
+      <div id="cours">
+        <h1>Cours </h1>
+        <h2>Tableau simple</h2>
+        <h2>Tableau à plusieurs dimensions</h2>
+        <h2>Tableau associatif</h2>
+        <h2>Accèder à un élément index/length</h2>
+        <h2>Accèder à un élément push/unshift</h2>
+        <h2>Retirer un élément pop/shift</h2>
+        <h2>Retrouver un élement grâce à sa valeur</h2>
+        <h2>Concaténer pour afficher(join)</h2>
+        <h2>Splice : ajouter/remplacer/supprimer</h2>
+        <h2>Les boulces (for...in)</h2>
+        <h2>Les boucle (for...of)</h2>
+        <h2>Méthode .forEeach</h2>
+        <ul>
+          <li>
+            Cette méthode prend en argument une fonction de rappel (callback) qui sera exécutée pour chaque élément du
+            tableau.
+          </li>
+          <li>
+            Le callback peut recevoir jusqu'à trois arguments : l'élément actuel, l'index de l'élément et le tableau sur
+            lequel forEach() a été appelé.
+          </li>
+          <li>
+            Itère sur l'objet original contrairement à .map qui créer un nouvel objet.
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
+          <code>
+  const number = [1,2,3,4]
+  numbers.forEach((num, index, array) => console.log(num))
+  // affiche
+  //1 0(4)[1,2,3,4]
+  //2 1(4)[1,2,3,4]
+  //3 2(4)[1,2,3,4]
+  //4 3(4)[1,2,3,4]
+          </code>
+        </pre>
+        <h2>Méthode .map </h2>
+        <ul>
+          <li>
+            Permet d'itérer sur chaque élément d'un tableau et de créer un nouveau tableau à partir des résultats de
+            l'application d'une fonction sur chaque élément.
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
         <code>
-const number = [1,2,3,4]
-numbers.forEach((num, index, array) => console.log(num))
-// affiche
-//1 0(4)[1,2,3,4]
-//2 1(4)[1,2,3,4]
-//3 2(4)[1,2,3,4]
-//4 3(4)[1,2,3,4]
+  const people = [
+  {
+  name: "Pedro",
+  age: 25
+  },
+  {
+  name: "Sara",
+  age: 26
+  },
+  {
+  name: "Maria",
+  age: 27
+  }
+  ]
+
+  const names = people.map(people => people.name)
+  console.log(names)
+  //Affiche un nouvel array avec les clé "name"
+  //Array(3)
+  //0:"Pedro"
+  //1:"Sara"
+  //2:"Maria"
+  //length:3
         </code>
       </pre>
-      <h2>Méthode .map </h2>
-      <ul>
-        <li>
-          Permet d'itérer sur chaque élément d'un tableau et de créer un nouveau tableau à partir des résultats de
-          l'application d'une fonction sur chaque élément.
-        </li>
-      </ul>
-      <pre style="tab-size: 2;">
+        <h2>Méthode filter </h2>
+        <ul>
+          <li>
+            Crée un nouveau tableau contenant uniquement les éléments qui passent un test spécifié par une fonction de
+            rappel.
+          </li>
+          <li>
+            En d'autres termes, elle crée un nouveau tableau en filtrant les éléments du tableau d'origine selon un
+            critère défini par la fonction de rappel.
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
         <code>
-      const people = [
-      {
-      name: "Pedro",
-      age: 25
-      },
-      {
-      name: "Sara",
-      age: 26
-      },
-      {
-      name: "Maria",
-      age: 27
-      }
-      ]
+  const heights = [170,185,198,162,187,155,178,207,201,189]
 
-      const names = people.map(people => people.name)
-      console.log(names)
-      //Affiche un nouvel array avec les clé "name"
-      //Array(3)
-      //0:"Pedro"
-      //1:"Sara"
-      //2:"Maria"
-      //length:3
+  const lessThan180 = heights.filter(height => height < 180)
+  console.log(lessThan180) // affiche [170, 162, 155, 178]
         </code>
       </pre>
-      <h2>Méthode filter </h2>
-      <ul>
-        <li>
-          Crée un nouveau tableau contenant uniquement les éléments qui passent un test spécifié par une fonction de
-          rappel.
-        </li>
-        <li>
-          En d'autres termes, elle crée un nouveau tableau en filtrant les éléments du tableau d'origine selon un
-          critère défini par la fonction de rappel.
-        </li>
-      </ul>
-      <pre style="tab-size: 2;">
+        <h2>Méthode reduce </h2>
+        <ul>
+          <li>
+            La méthode reduce() applique une fonction qui est un « accumulateur ».
+          </li>
+          <li>
+            Elle traite chaque valeur d'une liste (de la gauche vers la droite) afin de la réduire à une seule valeur.
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
         <code>
-const heights = [170,185,198,162,187,155,178,207,201,189]
+  const marks = [18,5,17,12,20,16,14]
 
-const lessThan180 = heights.filter(height => height < 180)
-console.log(lessThan180) // affiche [170, 162, 155, 178]
-        </code>
-      </pre>
-      <h2>Méthode reduce </h2>
-      <ul>
-        <li>
-          La méthode reduce() applique une fonction qui est un « accumulateur ».
-        </li>
-        <li>
-          Elle traite chaque valeur d'une liste (de la gauche vers la droite) afin de la réduire à une seule valeur.
-        </li>
-      </ul>
-      <pre style="tab-size: 2;">
-        <code>
-const marks = [18,5,17,12,20,16,14]
-
-const average = marks.reduce((acc, mark) => acc + mark, 0) / mark.length
-// Initialise à 0, puis itère 0+18, 18+5, 23+17, 40+12, ect...
-// Divise la somme par le nombre d'éléments pour obtenir une moyenne
-console.log(average)
+  const average = marks.reduce((acc, mark) => acc + mark, 0) / mark.length
+  // Initialise à 0, puis itère 0+18, 18+5, 23+17, 40+12, ect...
+  // Divise la somme par le nombre d'éléments pour obtenir une moyenne
+  console.log(average)
         </code>
       </pre>
 
-      <h2>Méthode .sort </h2>
-      <ul>
-        <li>
-          La méthode .sort trie les éléments d'un tableau (par défaut en les convertissant en chaîne de caractères)
-        </li>
-        <li>
-          Elle transforme le tableau sur lequelle est elle appliquée
-        </li>
-        <li>
-          Exemple avec un tableau contenant des lettres
-        </li>
-      </ul>
-      <pre style="tab-size: 2;">
+        <h2>Méthode .sort </h2>
+        <ul>
+          <li>
+            La méthode .sort trie les éléments d'un tableau (par défaut en les convertissant en chaîne de caractères)
+          </li>
+          <li>
+            Elle transforme le tableau sur lequelle est elle appliquée
+          </li>
+          <li>
+            Exemple avec un tableau contenant des lettres
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
         <code>
-const letters = ["z","b","a","d","e"];
+  const letters = ["z","b","a","d","e"];
 
-let sortedLetters = letters.sort()
-console.log(sortedLetters) // Affiche ["a", "b", "d", "e", "z"]
+  let sortedLetters = letters.sort()
+  console.log(sortedLetters) // Affiche ["a", "b", "d", "e", "z"]
         </code>
       </pre>
-      <ul>
-        <li>
-          Exemple avec un tableau contenant des nombres
-        </li>
-      </ul>
-      <pre style="tab-size: 2;">
+        <ul>
+          <li>
+            Exemple avec un tableau contenant des nombres
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
         <code>
-const numbers2 = [10,55,2,250,500,85]
-numbers.sort((a,b) => a - b) // Affiche [10, 55, 2, 250, 500, 85]
+  const numbers2 = [10,55,2,250,500,85]
+  numbers.sort((a,b) => a - b) // Affiche [10, 55, 2, 250, 500, 85]
         </code>
       </pre>
-      <ul>
-        <li>
-          Exemple avec un un tableaux d'objets
-        </li>
-      </ul>
-      <pre style="tab-size: 2;">
+        <ul>
+          <li>
+            Exemple avec un un tableaux d'objets
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
         <code>
-const store = [
-{
-    item: "Cahier",
-    price: 20
-},
-{
-    item: "Sac",
-    price: 60
-},
-{
-    item: "Stylo",
-    price: 2
-},
-]
-store.sort((a,b) => a.price - b.price)
-console.log(store)
-// Affiche les items par ordre de prix
-// 0:{item: 'Stylo, price: 2}
-// 1:{item: 'Cachier', price:20}
+  const store = [
+  {
+      item: "Cahier",
+      price: 20
+  },
+  {
+      item: "Sac",
+      price: 60
+  },
+  {
+      item: "Stylo",
+      price: 2
+  },
+  ]
+  store.sort((a,b) => a.price - b.price)
+  console.log(store)
+  // Affiche les items par ordre de prix
+  // 0:{item: 'Stylo, price: 2}
+  // 1:{item: 'Cachier', price:20}
         </code>
       </pre>
-
-      <h2>Concaténer un tableau associatif</h2>
+        <h2>Concaténer un tableau associatif</h2>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz mémoire</a></h2>
+      </div>
     </section>
-    <br>
+
     <section id="objets">
       <h1>Objets JS</h1>
-      <h2>Créer un objet</h2>
-      <p>...</p>
-      <h2>Le destructuring / affectation par décomposition </h2>
-      <p>consiste à créer des variables à partir des propriétés d'un objet ou des éléments d'un tableau.</p>
-      <pre style="tab-size: 2;">
+      <div id="cours">
+        <h1>Cours </h1>
+        <h2>Créer un objet</h2>
+        <h2>Le destructuring / affectation par décomposition </h2>
+        <ul>
+          <li>
+            consiste à créer des variables à partir des propriétés d'un objet ou des éléments d'un tableau.
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
         <code>
 const userObj = {
   userName: "Karl",
@@ -829,10 +940,10 @@ console.log(country, sport, beverage)
 //Créer des valeurs par défaut si la propriété n'est pas présente dans l'objet d'origine
         </code>
       </pre>
-      <p>
-        On peut passer des propriété d'objets directement en tant que paramètre à nos fonctions
-      </p>
-      <pre style="tab-size: 2;">
+        <p>
+          On peut passer des propriété d'objets directement en tant que paramètre à nos fonctions
+        </p>
+        <pre style="tab-size: 2;">
         <code>
 const numbers = {
   num1: 50,
@@ -859,10 +970,10 @@ console.log(cat, dog)
 // Les valeurs du "cat" et "dog" du tableau "animal" ont été textraites dans de nouvelles variables par destructruring.
         </code>
       </pre>
-      <p>
-        On peut faire ignorer des valeurs lors du destructuring grâce à ",,"
-      </p>
-      <pre style="tab-size: 2;">
+        <p>
+          On peut faire ignorer des valeurs lors du destructuring grâce à ",,"
+        </p>
+        <pre style="tab-size: 2;">
         <code>
 const fruits = ["strawberry", "grapes", "banana", "apples"]
 const [strawberry, grapes,, apple] = fruits
@@ -870,24 +981,24 @@ console.log(strawberry, grapes, apple)
 // absence de "banana" ici
         </code>
       </pre>
-      <p>
-        Exemple avec le reste d'un tableau
-      </p>
-      <pre style="tab-size: 2;">
+        <p>
+          Exemple avec le reste d'un tableau
+        </p>
+        <pre style="tab-size: 2;">
         <code>
             EXEMPLE
         </code>
       </pre>
-      <h2>Objet Set</h2>
-      <h2>Objet Map</h2>
-      <h2>Objet WeakSet</h2>
-      <h2>Objet WeakMap</h2>
-      <h2>REST parameter / nombre infini d'arguments</h2>
-      <p>
-        Le rest parameter "..." permet de prendre en compte un nombre de strings arbitaire lors de l'appel de la
-        fonction concatenation
-      </p>
-      <pre style="tab-size: 2;">
+        <h2>Objet Set</h2>
+        <h2>Objet Map</h2>
+        <h2>Objet WeakSet</h2>
+        <h2>Objet WeakMap</h2>
+        <h2>REST parameter / nombre infini d'arguments</h2>
+        <p>
+          Le rest parameter "..." permet de prendre en compte un nombre de strings arbitaire lors de l'appel de la
+          fonction concatenation
+        </p>
+        <pre style="tab-size: 2;">
         <code>
 function concatenation(...strings){
   console.log(strings);
@@ -898,12 +1009,13 @@ console.log(concatenation("Je ", "suis ", "heureux."));
 //  Chacune des 3 strings est ici passée en argument lors de l'appel de la fonction "concatenation"
         </code>
       </pre>
-      <h2>Spread operator / syntaxe de décomposition</h2>
-      <p>Permet de copier les valeurs d'un élément itérable (tableau, chaîne, objet...).
-        pratique pour effecteur une copie superficielle / afficher une liste. Les objets sont des valeurs de référence,
-        pas des primitives. Copie d'un objet = copie d'un emplacement de mémoire de celui-ci (shallow copie)
-      </p>
-      <pre style="tab-size: 2;">
+        <h2>Spread operator / syntaxe de décomposition</h2>
+        <p>Permet de copier les valeurs d'un élément itérable (tableau, chaîne, objet...).
+          pratique pour effecteur une copie superficielle / afficher une liste. Les objets sont des valeurs de
+          référence,
+          pas des primitives. Copie d'un objet = copie d'un emplacement de mémoire de celui-ci (shallow copie)
+        </p>
+        <pre style="tab-size: 2;">
         <code>
 const array = [1,2,3,]
 console.log(...array)
@@ -928,376 +1040,458 @@ const shallowObjectCopy = {...obj, work: "Magneto"}
 // Fonctionne également avec les objets.
         </code>
       </pre>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz les objets</a></h2>
+      </div>
+    </section>
 
-    </section>
-    <br>
     <section id="BOM">
-      <h1>BOM (Brower Oriented Model)</h1>
-      <h2>Définition</h2>
-      <h2>Window</h2>
-      <h2>Navigator</h2>
-      <h2>History</h2>
-      <h2>Location</h2>
-      <h2>Screen</h2>
-      <h2>Document</h2>
+      <h1>BOM (Browser Oriented Model)</h1>
+      <div id="cours">
+        <h1>Cours </h1>
+        <h2>Définition</h2>
+        <h2>Window</h2>
+        <h2>Navigator</h2>
+        <h2>History</h2>
+        <h2>Location</h2>
+        <h2>Screen</h2>
+        <h2>Document</h2>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz BOM</a></h2>
+      </div>
     </section>
-    <br>
+
     <section id="DOM">
       <h1>DOM (Document Oriented Model)</h1>
-      <h2>Accéder aux élément du DOM</h2>
-      <h3>getElementsByTagName() </h3>
-      <ul>
-        <li>
-          Sélectionne tous les éléments avec la balise entre parenthèses
-        </li>
-      </ul>
-      <pre style="tab-size: 2;">
-        <code>
-const paragraphs = document.getElementsByTagName('p');
-        </code>
-      </pre>
-      <h3>getElementById()</h3>
-      <ul>
-        <li>
-          Sélectionne tous les éléments avec la balise entre parenthèses
-        </li>
-      </ul>
-      <pre style="tab-size: 2;">
-        <code>
-const paragraphe2 = document.getElementById('paragraphe2');
-        </code>
-      </pre>
-      <h3>getElementsByClassName()</h3>
-      <ul>
-        <li>
-          Sélectionne tous les éléments avec la classe entre parenthèses
-        </li>
-      </ul>
-      <pre style="tab-size: 2;">
-        <code>
-const paragraphe = document.getElementById('paragraphe');
-        </code>
-      </pre>
-      <h3>querySelector()</h3>
-      <ul>
-        <li>
-          Sélectionne un seul élément : celui avec le sélecteur entre parenthèses
-        </li>
-      </ul>
-      <pre>
-        <code>
-const premierParagraphe = document.querySelector('p');
-        </code>
-      </pre>
-      <h3>querySelectorAll()</h3>
-      <ul>
-        <li>
-          Sélectionne tous les éléments avec le sélecteur entre parenthèses
-        </li>
-      </ul>
-      <pre style="tab-size: 2;">
-        <code>
-const paragraphs = document.querySelectorAll('p');
-        </code>
-      </pre>
+      <div id="cours">
+        <h1>Cours </h1>
+        <h2>Accéder aux élément du DOM</h2>
+        <h3>getElementsByTagName() </h3>
+        <ul>
+          <li>
+            Sélectionne tous les éléments avec la balise entre parenthèses
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
+          <code>
+            const paragraphs = document.getElementsByTagName('p');
+          </code>
+        </pre>
+        <h3>getElementById()</h3>
+        <ul>
+          <li>
+            Sélectionne tous les éléments avec la balise entre parenthèses
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
+          <code>
+            const paragraphe2 = document.getElementById('paragraphe2');
+          </code>
+        </pre>
+        <h3>getElementsByClassName()</h3>
+        <ul>
+          <li>
+            Sélectionne tous les éléments avec la classe entre parenthèses
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
+          <code>
+            const paragraphe = document.getElementById('paragraphe');
+          </code>
+        </pre>
+        <h3>querySelector()</h3>
+        <ul>
+          <li>
+            Sélectionne un seul élément : celui avec le sélecteur entre parenthèses
+          </li>
+        </ul>
+        <pre>
+          <code>
+            const premierParagraphe = document.querySelector('p');
+          </code>
+        </pre>
+        <h3>querySelectorAll()</h3>
+        <ul>
+          <li>
+            Sélectionne tous les éléments avec le sélecteur entre parenthèses
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
+          <code>
+            const paragraphs = document.querySelectorAll('p');
+          </code>
+        </pre>
 
-      <h2>Modifier des éléments</h2>
-      <p>textContent : Modifie le texte d'un élément
-      </p>
-      <p>InnerHTML : Modifie l'HTML d'un élément</p>
-      <h2>Ajouter des éléments</h2>
-      <p>
-      <ul>
-        <li>createElement() - Crée un élément</li>
-        <li>prepend() - Ajoute l'élément entre parenthèses devant l'élément cible</li>
-        <li>append() - Ajouter l'élément entre parenthèses derrière l'élément cible (peut contenir du texte)</li>
-        <li>appendChild() - Ajouter l'élément entre parenthèses derrière l'élément cible (ne peut pas contenir du texte)
-        </li>
-        <li>insertBefore() - Insère un élément avant l'élément cible</li>
-      </ul>
-      </p>
-      <h2>Supprimer des éléments</h2>
-      <h2>Modifier style des éléments</h2>
+        <h2>Modifier des éléments</h2>
+        <ul>
+          <li>
+            textContent : Modifie le texte d'un élément
+          </li>
+          <li>
+            InnerHTML : Modifie l'HTML d'un élément
+          </li>
+        </ul>
+        <h2>Ajouter des éléments</h2>
+        <ul>
+          <li>createElement() - Crée un élément</li>
+          <li>prepend() - Ajoute l'élément entre parenthèses devant l'élément cible</li>
+          <li>append() - Ajouter l'élément entre parenthèses derrière l'élément cible (peut contenir du texte)</li>
+          <li>appendChild() - Ajouter l'élément entre parenthèses derrière l'élément cible (ne peut pas contenir du
+            texte)
+          </li>
+          <li>insertBefore() - Insère un élément avant l'élément cible</li>
+        </ul>
+        <h2>Supprimer des éléments</h2>
+        <h2>Modifier style des éléments</h2>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz DOM</a></h2>
+      </div>
     </section>
-    <br>
-    <section id="évènements">
-      <h1>Evènements</h1>
-      <h2>Définition</h2>
-      <h2>Les écouteurs</h2>
-      <h2>Propagation</h2>
-      <h2>Planifier un script</h2>
-      <p>setTimeout</p>
-      <p>setInterval</p>
+
+    <section id="événements">
+      <h1>Evénements</h1>
+      <div id="cours">
+        <h1>Cours </h1>
+        <h2>Définition</h2>
+        <h2>Les écouteurs</h2>
+        <h2>Propagation</h2>
+        <h2>Planifier un script</h2>
+        <h3>setTimeout</h3>
+        <h3>setInterval</h3>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz événements</a></h2>
+      </div>
     </section>
-    <br>
+
     <section id="POO">
       <h1>POO</h1>
-      <h2>Définition</h2>
-      <h2>Objet littéral</h2>
-      <h2>Constructeur</h2>
-      <h2>Prototypes</h2>
-      <h2>Créer objet</h2>
-      <h2>Héritage</h2>
-      <h2>Bind, Call et Apply</h2>
-      <h2>Créer objet avec constructeur</h2>
-      <h2>Getter et Setter</h2>
+      <div id="cours">
+        <h1>Cours </h1>
+        <h2>Définition</h2>
+        <h2>Objet littéral</h2>
+        <h2>Constructeur</h2>
+        <h2>Prototypes</h2>
+        <h2>Créer objet</h2>
+        <h2>Héritage</h2>
+        <h2>Bind, Call et Apply</h2>
+        <h2>Créer objet avec constructeur</h2>
+        <h2>Getter et Setter</h2>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz POO</a></h2>
+      </div>
     </section>
 
     <section id="date">
-      <h1>Date</h1>
-      <h2>Objet Date</h2>
-      <h2>Getter/setter avec Date</h2>
-      <h2>Transformer date</h2>
+      <h1>Dates</h1>
+      <div id="cours">
+        <h1>Cours </h1>
+        <h2>Objet Date</h2>
+        <h2>Getter/setter avec Date</h2>
+        <h2>Transformer date</h2>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz dates</a></h2>
+      </div>
     </section>
 
     <section id="api">
       <h1>API</h1>
-      <h2>Définition</h2>
-      <h2>AJAX</h2>
-      <h2>XMLHttpRequest</h2>
-      <p>get</p>
-      <p>send</p>
+      <div id="cours">
+        <h1>Cours </h1>
+        <h2>Définition</h2>
+        <h2>AJAX</h2>
+        <h2>XMLHttpRequest</h2>
+        <h3>get</h3>
+        <h3>send</h3>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz api</a></h2>
+      </div>
     </section>
 
     <section id="asynchrone">
       <h1>Asynchrone</h1>
-      <h2>Définition</h2>
-      <ul>
-        <li>
-          "Asynchrone" fait référence à l'exécution de code sans bloquer le thread principal.
-        </li>
-        <li>
-          Cela signifie que lorsque vous exécutez une opération asynchrone, le reste du code peut continuer à s'exécuter
-          sans attendre que cette opération soit terminée.
-        </li>
-        <li>
-          Les opérations asynchrones sont couramment utilisées pour des tâches telles que les appels réseau, la
-          lecture/écriture de fichiers, ou tout autre type d'opération qui peut prendre du temps.
-        </li>
-      </ul>
-      <h2>Promesses</h2>
-      <ul>
-        <li>
-          Objet représentant l'achèvement ou l'échec éventuel d'une opération asynchrone.
-          3 était : en attente (pending), résolue (fulfilled) ou rejetée (rejected).
-          Une promesse est créée avec le constructeur Promise, et elle expose une méthode then pour réagir lorsque la
-          promesse est résolue,
-          et une méthode catch pour gérer les erreurs lorsqu'elle est rejetée.
-        </li>
-      </ul>
-      <h2>Async et Await</h2>
-      <h2>Callback</h2>
-      <ul>
-        <li>
-          Fonction passée comme argument à une autre fonction et qui est ensuite invoquée à un moment ultérieur
-          dans l'exécution de cette fonction parente, généralement en réponse à un événement ou à une condition
-          spécifique.
-        </li>
-      </ul>
-      <pre style="tab-size: 2" ;>
+      <div id="cours">
+        <h1>Cours </h1>
+        <h2>Définition</h2>
+        <ul>
+          <li>
+            "Asynchrone" fait référence à l'exécution de code sans bloquer le thread principal.
+          </li>
+          <li>
+            Cela signifie que lorsque vous exécutez une opération asynchrone, le reste du code peut continuer à
+            s'exécuter
+            sans attendre que cette opération soit terminée.
+          </li>
+          <li>
+            Les opérations asynchrones sont couramment utilisées pour des tâches telles que les appels réseau, la
+            lecture/écriture de fichiers, ou tout autre type d'opération qui peut prendre du temps.
+          </li>
+        </ul>
+        <h2>Promesses</h2>
+        <ul>
+          <li>
+            Objet représentant l'achèvement ou l'échec éventuel d'une opération asynchrone.
+            3 était : en attente (pending), résolue (fulfilled) ou rejetée (rejected).
+            Une promesse est créée avec le constructeur Promise, et elle expose une méthode then pour réagir lorsque la
+            promesse est résolue,
+            et une méthode catch pour gérer les erreurs lorsqu'elle est rejetée.
+          </li>
+        </ul>
+        <h2>Async et Await</h2>
+        <h2>Callback</h2>
+        <ul>
+          <li>
+            Fonction passée comme argument à une autre fonction et qui est ensuite invoquée à un moment ultérieur
+            dans l'exécution de cette fonction parente, généralement en réponse à un événement ou à une condition
+            spécifique.
+          </li>
+        </ul>
+        <pre style="tab-size: 2" ;>
           <code>
-// Fonction qui dit bonjour dans différentes langues
-function sayHello(firstName, languageCallback) {
-    console.log(languageCallback(firstName));
-}
+            // Fonction qui dit bonjour dans différentes langues
+            function sayHello(firstName, languageCallback) {
+              console.log(languageCallback(firstName));
+            }
 
-// Fonction de rappel pour dire bonjour en anglais
-function sayHelloInEnglish(firstName) {
-    return "Hello, " + firstName + "!";
-}
+            // Fonction de rappel pour dire bonjour en anglais
+            function sayHelloInEnglish(firstName) {
+              return "Hello, " + firstName + "!";
+            }
 
-// Fonction de rappel pour dire bonjour en français
-function sayHelloInFrench(firstName) {
-    return "Bonjour, " + firstName + " !";
-}
+            // Fonction de rappel pour dire bonjour en français
+            function sayHelloInFrench(firstName) {
+              return "Bonjour, " + firstName + " !";
+            }
 
-// Fonction de rappel pour dire bonjour en espagnol
-function sayHelloInSpanish(firstName) {
-    return "¡Hola, " + firstName + "!";
-}
+            // Fonction de rappel pour dire bonjour en espagnol
+            function sayHelloInSpanish(firstName) {
+              return "¡Hola, " + firstName + "!";
+            }
 
-// Appels de la fonction sayHello avec différentes fonctions de rappel
-sayHello("Alice", sayHelloInEnglish); //Affiche Hello, Alice!
-sayHello("François", sayHelloInFrench); // Affiche Bonjour, François!
-sayHello("Carlos", sayHelloInSpanish); // Affiche ¡Hola, Carlos!
+            // Appels de la fonction sayHello avec différentes fonctions de rappel
+            sayHello("Alice", sayHelloInEnglish); //Affiche Hello, Alice!
+            sayHello("François", sayHelloInFrench); // Affiche Bonjour, François!
+            sayHello("Carlos", sayHelloInSpanish); // Affiche ¡Hola, Carlos!
           </code>
         </pre>
-      <h2>Fetch</h2>
-      <ul>
-        <li>
-          Bibliothèque JavaScript qui simplifie l'envoi de requêtes HTTP à partir du navigateur ou de Node.js. Elle
-          utilise les Promesses pour gérer les requêtes asynchrones
-        </li>
-        <li>
-          Facilite la communication avec des serveurs web via les protocoles HTTP et HTTPS. Axios est largement
-          utilisée dans le développement web moderne pour effectuer des requêtes AJAX de manière simple et efficace.
-        </li>
-      </ul>
-      <ul>
-        <li>
-          Get avec fetch
-        </li>
-        <pre pre style="tab-size: 2" ;>
-          <code>
-// Appel à une API via fetch
-// Utilisation de l'API jsonplaceholder pour récupérer des données factices d'utilisateurs
-const apiURL = "https://jsonplaceholder.typicode.com/users"
-// Définition de la constante contenant l'URL de l'API
+        <h2>Fetch</h2>
+        <ul>
+          <li>
+            Bibliothèque JavaScript qui simplifie l'envoi de requêtes HTTP à partir du navigateur ou de Node.js. Elle
+            utilise les Promesses pour gérer les requêtes asynchrones
+          </li>
+          <li>
+            Facilite la communication avec des serveurs web via les protocoles HTTP et HTTPS. Axios est largement
+            utilisée dans le développement web moderne pour effectuer des requêtes AJAX de manière simple et efficace.
+          </li>
+        </ul>
+        <ul>
+          <li>
+            Get avec fetch
+          </li>
+          <pre pre style="tab-size: 2" ;>
+            <code>
+              // Appel à une API via fetch
+              // Utilisation de l'API jsonplaceholder pour récupérer des données factices d'utilisateurs
+              const apiURL = "https://jsonplaceholder.typicode.com/users"
+              // Définition de la constante contenant l'URL de l'API
 
-// Envoi d'une requête à l'URL de l'API en utilisant la méthode fetch
-// Cela retourne une promesse qui sera résolue avec la réponse de la requête
-fetch(apiURL)
-//Retourne une promesse qui sera résolue avec la réponse de la requête
-// Le bloc suivant est exécuté lorsque la promesse est résolue (qu'elle soit réussie ou échouée)
-.then(response => {
-  console.log(response)
+              // Envoi d'une requête à l'URL de l'API en utilisant la méthode fetch
+              // Cela retourne une promesse qui sera résolue avec la réponse de la requête
+              fetch(apiURL)
+              //Retourne une promesse qui sera résolue avec la réponse de la requête
+              // Le bloc suivant est exécuté lorsque la promesse est résolue (qu'elle soit réussie ou échouée)
+              .then(response => {
+                console.log(response)
 
- // Vérification du statut de la réponse
-// Si le statut n'est pas "ok", une erreur est lancée
-  if(!response.ok) {
-  throw new Error(`Erreur", ${response.status}`)
-  }
-// Extraction des données JSON de la réponse
-  return response.json()
-})
+                // Vérification du statut de la réponse
+                // Si le statut n'est pas "ok", une erreur est lancée
+                if(!response.ok) {
+                  throw new Error(`Erreur", ${response.status}`)
+                }
+                // Extraction des données JSON de la réponse
+                return response.json()
+              })
 
-//2ème promesse (enchainement)
-// Ce bloc est exécuté après que les données JSON ont été extraites de la réponse
-// On peut mettre autant de ".then" que l'on veut
-.then(data => {
-  console.log(data)
-  console.log("2ème ", data)
-})
+              //2ème promesse (enchainement)
+              // Ce bloc est exécuté après que les données JSON ont été extraites de la réponse
+              // On peut mettre autant de ".then" que l'on veut
+              .then(data => {
+                console.log(data)
+                console.log("2ème ", data)
+              })
 
-// Ce bloc est exécuté si une erreur survient à n'importe quel moment de la chaîne de promesses
-.catch(e => {
-  console.log(e)
-})
+              // Ce bloc est exécuté si une erreur survient à n'importe quel moment de la chaîne de promesses
+              .catch(e => {
+                console.log(e)
+              })
 
-// Affiche
-//Response {url: "https://jsonplaceholder.typicode.com/users", status: 200, ok: true, statusText: "OK", headers: Headers, …}
-//{[Données JSON]}
-//2ème {[Données JSON]}
-          </code>
-        </pre>
-      </ul>
-      <h2>Axios</h2>
-      <ul>
-        <li>
-          Get / send avec Axios
-        </li>
-      </ul>
+              // Affiche
+              //Response {url: "https://jsonplaceholder.typicode.com/users", status: 200, ok: true, statusText: "OK", headers: Headers, …}
+              //{[Données JSON]}
+              //2ème {[Données JSON]}
+            </code>
+          </pre>
+        </ul>
+        <h2>Axios</h2>
+        <ul>
+          <li>
+            Get / send avec Axios
+          </li>
+        </ul>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz asynchrone</a></h2>
+      </div>
     </section>
 
     <section id="cookies">
       <h1>Cookies</h1>
-      <h2>LocalStorage / SessionStorage</h2>
+      <div id="cours">
+        <h1>Cours </h1>
+        <h2>LocalStorage / SessionStorage</h2>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz asynchrone</a></h2>
+      </div>
     </section>
 
     <section id="modules">
       <h1>Modules</h1>
-      <h2>Défintion</h2>
-      <ul>
-        <li>
-          Fichier ou partie de code JS qui encapsule une ou plusieurs fonctionnalités liées.
-        </li>
-        <li>
-          L'objectif principal des modules est d'organiser le code en unités autonomes et réutilisables.
-        </li>
-        <li>
-          Les modules favorisent la modularité (no shit), la réutilisabilité et la maintenabilité du code.
-        </li>
-      </ul>
-      <pre style="tab-size: 2">
-        <code>
-// fichier module.js
-// Création des variables
-const age = 45
-let userName = "Luke"
-// Exportation des variables depuis le module
-export {age, userName}
+      <div id="cours">
+        <h1>Cours </h1>
+        <h2>Défintion</h2>
+        <ul>
+          <li>
+            Fichier ou partie de code JS qui encapsule une ou plusieurs fonctionnalités liées.
+          </li>
+          <li>
+            L'objectif principal des modules est d'organiser le code en unités autonomes et réutilisables.
+          </li>
+          <li>
+            Les modules favorisent la modularité (no shit), la réutilisabilité et la maintenabilité du code.
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+            // fichier module.js
+            // Création des variables
+            const age = 45
+            let userName = "Luke"
+            // Exportation des variables depuis le module
+            export {age, userName}
 
-//Création d'une fonction pour un export par défaut
-function foo() {
-  console.log("Hello from module")
-}
-export default foo
+            //Création d'une fonction pour un export par défaut
+            function foo() {
+              console.log("Hello from module")
+            }
+            export default foo
 
-//ficher javascript.js
-import {age, userName} from "./module.js";
-console.log(age, userName); // Affiche 45 'Luke'
+            //ficher javascript.js
+            import {age, userName} from "./module.js";
+            console.log(age, userName); // Affiche 45 'Luke'
 
-import foo from "./module.js"
-foo() // Affiche "Hello from module"
-// Il n'y a qu'un seul export par défaut par fichier, + son nom est changeable
-        </code>
-      </pre>
-      <pre style="tab-size: 2" ;>
-        <code>
-// Existe également avec la fonction importat all (*) //
-import * as Utils from "./module.js"
-// Permet d'importer l'intégralité des imports existants //
-        </code>
-      </pre>
+            import foo from "./module.js"
+            foo() // Affiche "Hello from module"
+            // Il n'y a qu'un seul export par défaut par fichier, + son nom est changeable
+          </code>
+        </pre>
+        <pre style="tab-size: 2" ;>
+          <code>
+            // Existe également avec la fonction importat all (*) //
+            import * as Utils from "./module.js"
+            // Permet d'importer l'intégralité des imports existants //
+          </code>
+        </pre>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz modules</a></h2>
+      </div>
     </section>
 
     <section id="inclassables">
       <h1>Inclassables</h1>
-      <h2>Géolocalisation</h2>
-      <h2>Modules</h2>
-      <p>Import</p>
-      <p>Export</p>
-      <p>Mode strict</p>
+      <div id="cours">
+        <h1>Cours </h1>
+        <h2>Géolocalisation</h2>
+        <h2>Mode strict</h2>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz inclassables</a></h2>
+      </div>
     </section>
 
     <section id="astuces">
       <h1>Astuces</h1>
-      <h3>Ajouter une fonction classique / une fonction fléchée </h3>
-      <pre style="tab-size: 2" ;>
-        <code>
-const obj = {
-  feature() {
-    console.log("Hello world!")
-  },
-  arrow: () => {
-    console.log("Hello Solo!")
-  }
-  }
+      <div id="cours">
+        <h1>Cours </h1>
+        <h3>Ajouter une fonction classique / une fonction fléchée </h3>
+        <pre style="tab-size: 2" ;>
+          <code>
+            const obj = {
+              feature() {
+                console.log("Hello world!")
+              },
+              arrow: () => {
+                console.log("Hello Solo!")
+              }
+            }
 
-  obj.feature() // Affiche "Hello world!"
-  obj.arrow() // Affiche "Hello Solo!"
-        </code>
-      </pre>
-      <h3>Ajouter facilement des propriétés à un objet</h3>
-      <pre style="tab-size: 2" ;>
-        <code>
-const userName = "Lucie";
-const age = 24;
+            obj.feature() // Affiche "Hello world!"
+            obj.arrow() // Affiche "Hello Solo!"
+          </code>
+        </pre>
+        <h3>Ajouter facilement des propriétés à un objet</h3>
+        <pre style="tab-size: 2" ;>
+          <code>
+            const userName = "Lucie";
+            const age = 24;
 
-const user = {
-  userName,
-  age
-}
-console.log(user);
-// Affiche les propriétés qui ont la valeur de la constante
-// Ici "Luice" et "24"
-        </code>
-      </pre>
-      <h3>Utiliser une expression pour créer une prop</h3>
-      <pre style="tab-size: 2" ;>
-        <code>
-let category = "industry";
-const plant = {
-  id: 547,
-  [category]: "Microship"
-}
-console.log(plant);
-// La propriété [category] est crée à partir de la valeur de la variable du même nom
-// Elle affichera "industry"
-        </code>
-      </pre>
+            const user = {
+              userName,
+              age
+            }
+            console.log(user);
+            // Affiche les propriétés qui ont la valeur de la constante
+            // Ici "Luice" et "24"
+          </code>
+        </pre>
+        <h3>Utiliser une expression pour créer une prop</h3>
+        <pre style="tab-size: 2" ;>
+          <code>
+            let category = "industry";
+            const plant = {
+              id: 547,
+              [category]: "Microship"
+            }
+            console.log(plant);
+            // La propriété [category] est crée à partir de la valeur de la variable du même nom
+            // Elle affichera "industry"
+          </code>
+        </pre>
+      </div>
+      <div id="questions">
+        <h1>Questions </h1>
+        <h2><a href="quiz_js.html">Lien quizz astuces</a></h2>
+      </div>
     </section>
-
 
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
