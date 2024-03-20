@@ -91,8 +91,8 @@ header {
   margin-top: 20px;
   margin-left: 20px;
   background-color: aliceblue;
-  height: 290px;
-  width: 150px;
+  height: 320px;
+  width: 200px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   align-self: flex-start;
 }
@@ -146,4 +146,24 @@ nav {
 section {
   margin-top: auto;
   padding: auto;
+}
+
+.checkbox-label {
+  display: inline-flex; /* Utiliser flexbox */
+  align-items: center; /* Aligner les éléments verticalement */
+}
+
+.checkbox-label p {
+  margin-bottom: 0; /* Supprimer le margin-bottom de la balise <p> */
+}
+.checkbox {
+  margin-left: 5px; /* Ajouter un espace entre le texte et la case à cocher */
+}
+
+.indexJS {
+  padding-left: 0; /* Supprimer le padding à gauche de la section */
+}
+.indexJS ul {
+  list-style-type: none; /* Supprimer les puces de la liste */
+  padding: 0; /* Supprimer les marges intérieures de la liste */
 }
