@@ -1266,6 +1266,65 @@ finally {
   // 1:{item: 'Cachier', price:20}
         </code>
       </pre>
+
+      <h2>Méthode .some</h2>
+      <ul>
+        <li>
+          Si au moins l'un des élément répond au critère
+        </li>
+      </ul>
+      <pre style="tab-size: 2">
+        <code>
+          const people = [
+  { name: 'Wes', year: 1988 },
+  { name: 'Kait', year: 1986 },
+  { name: 'Irv', year: 1970 },
+  { name: 'Lux', year: 2015 }
+];
+
+const isAdult = people.some(person => ((new Date()).
+  getFullYear()) - person.year >= 18);
+console.log(isAdult); // Affiche true
+        </code>
+      </pre>
+
+      <h2>Méthode .every</h2>
+      <ul>
+        <li>
+          Tous les éléments répondent au critère
+        </li>
+      </ul>
+      <pre style="tab-size: 2">
+        <code>
+  const allAdult = people.every(person => ((new Date()).
+  getFullYear()) - person.year >= 18);
+console.log(allAdult); // Affiche false (Lux est né en 2015)
+        </code>
+      </pre>
+
+      <h2>Méthode .find</h2>
+      <ul>
+        <li>
+          Cherche  premier élément dans le tableau qui satisfait la condition donnée et renvoie cet élément.
+        </li>
+      </ul>
+      <pre style="tab-size: 2">
+        <code>
+  const comments = [
+  { text: 'Love this!', id: 523423 },
+  { text: 'Super good', id: 823423 },
+  { text: 'Nice Nice Nice!', id: 542328 }
+];
+
+const comment = comments.find(function(comment) {
+  if (comment.id === 823423) {
+    return true;
+  }
+})
+console.log(comment); // Affiche "true" car l'id 823423 est présent.
+        </code>
+      </pre>
+
         <h2>Concaténer un tableau associatif</h2>
       </div>
       <div id="questions">
@@ -1285,7 +1344,7 @@ finally {
             consiste à créer des variables à partir des propriétés d'un objet ou des éléments d'un tableau.
           </li>
         </ul>
-        <pre style="tab-size: 2;">
+        <pre style="tab-size: 2">
         <code>
 const userObj = {
   userName: "Karl",
