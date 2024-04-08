@@ -226,13 +226,13 @@
             Let & const sont hoisted mais pas initialisées.
           </li>
           <li>
-            Les déclarations de fonctions et de variables sont hissées en JavaScript. ELles sont stockées dans la
+            Les déclarations de fonctions et de variables sont hissées en JavaScript. Elles sont stockées dans la
             mémoire
             du VO(Variables Object)
             du contexte d'exécution actuel et rendues disponibles dans le contexte d'exécution avant même que
             l'exécution
             du code ne commence.
-            Seule la délcaration est hissée, pas sa valeur.
+            Seule la déclaration est hissée, pas sa valeur.
           </li>
         </ul>
         <pre style="tab-size: 2;">
@@ -383,6 +383,35 @@
   standardFunction(6,6) // affiche 12
           </code>
         </pre>
+        <ul>
+          <li>
+            this. : mot-clé spécial qui fait référence à l'objet sur lequel une fonction est appelée ou à l'objet dans
+            le contexte duquel une méthode est invoquée.
+          </li>
+        </ul>
+        <pre style="tab-size: 2;">
+          <code>
+  let jedi = {
+    firstName: "Luke"
+    lastName: "Skywalker"
+    greet: function() {
+      console.log("Hello, my name is" + this.firstName + this.lastName );
+    };
+  }
+
+  jedi.greet(); // Affiche: Hello, my name is Luke Skywalker
+  // .this fait référence à l'objet jedi ici
+
+  let anotherJedi = {
+    firstName: "Ashoka"
+    lastName: "Tano"
+  };
+
+  jedi.greet.call(anotherJedi) // Affiche: Hello, my name is Ashoka Tano
+  // Utilisation de la méthode greet() de l'objet jedi avec l'objet anotherJedi en tant que contexte
+          </code>
+        </pre>
+
         <h3>fonctions nommées</h3>
         <ul>
           <li>
@@ -547,7 +576,7 @@
             </code>
           </pre>
         <ul>
-          <li>Array</li>
+          <li>Méthodes de tableaux</li>
           <li>Fonction pour opérer dans les tableaux : push, pop, forEach, map, filter, reduce ect...</li>
         </ul>
         <pre>
@@ -568,7 +597,7 @@
             <code style="tab-size: 2";>
   let message = "Bonjour le monde";
   console.log(message.charAt(0)); // Affiche "B"
-  console.log(message.indexOf("le")); // Affiche
+  console.log(message.indexOf("le")); // Affiche 1
             </code>
           </pre>
         <ul>
@@ -1041,27 +1070,53 @@ finally {
       <div id="cours">
         <h1>Cours </h1>
         <h2>Tableau simple</h2>
+        <ul>
+          <li>
+            Tableau ou "array" simple avec 1 dimension.
+          </li>
+        </ul>
         <pre style="tab-size: 2">
           <code>
-
+  let tableauSimple = ["Luke", "Leila", "Anakain", "Padme"]
           </code>
         </pre>
         <h2>Tableau à plusieurs dimensions</h2>
+        <ul>
+          <li>
+            Tableau contenant d'autres tableaux en tant qu'éléments
+          </li>
+        </ul>
         <pre style="tab-size: 2">
           <code>
-
+  let tableauMultidimensionel = ["jedis", ["Obi-Wan", "Mace Windu", "Yoda"], siths, ["Palpatine", "Darth Maul"]]
           </code>
         </pre>
         <h2>Tableau associatif</h2>
+        <ul>
+          <li>
+            Structure de données où chaque élément est associé à une clé unique plutôt qu'à un index numérique.
+          </li>
+        </ul>
         <pre style="tab-size: 2">
           <code>
-
+  let tableauAssociatif = {
+    Purple: "Mace Windu",
+    Green: "Qui-Gon",
+    Blue: "Obi-wan"
+  };
+  console.log(tableauAssociatif["Purple"]); // Output: Mace Windu
           </code>
         </pre>
         <h2>Accèder à un élément index/length</h2>
         <pre style="tab-size: 2">
           <code>
+  // Longueur du tableau associatif:
+  let longueur = Object.keys(tableauAssociatif).length;
+  console.log(longueur); // Output: 3
 
+  // Trouver une valeur par sa clé:
+  let quiGon = tableauAssociatif["Green"];
+  console.log(quiGon); //
           </code>
         </pre>
         <h2>Accèder à un élément push/unshift</h2>
@@ -1267,13 +1322,13 @@ finally {
         </code>
       </pre>
 
-      <h2>Méthode .some</h2>
-      <ul>
-        <li>
-          Si au moins l'un des élément répond au critère
-        </li>
-      </ul>
-      <pre style="tab-size: 2">
+        <h2>Méthode .some</h2>
+        <ul>
+          <li>
+            Si au moins l'un des élément répond au critère
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
         <code>
           const people = [
   { name: 'Wes', year: 1988 },
@@ -1288,13 +1343,13 @@ console.log(isAdult); // Affiche true
         </code>
       </pre>
 
-      <h2>Méthode .every</h2>
-      <ul>
-        <li>
-          Tous les éléments répondent au critère
-        </li>
-      </ul>
-      <pre style="tab-size: 2">
+        <h2>Méthode .every</h2>
+        <ul>
+          <li>
+            Tous les éléments répondent au critère
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
         <code>
   const allAdult = people.every(person => ((new Date()).
   getFullYear()) - person.year >= 18);
@@ -1302,13 +1357,13 @@ console.log(allAdult); // Affiche false (Lux est né en 2015)
         </code>
       </pre>
 
-      <h2>Méthode .find</h2>
-      <ul>
-        <li>
-          Cherche  premier élément dans le tableau qui satisfait la condition donnée et renvoie cet élément.
-        </li>
-      </ul>
-      <pre style="tab-size: 2">
+        <h2>Méthode .find</h2>
+        <ul>
+          <li>
+            Cherche premier élément dans le tableau qui satisfait la condition donnée et renvoie cet élément.
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
         <code>
   const comments = [
   { text: 'Love this!', id: 523423 },
