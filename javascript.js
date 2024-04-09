@@ -72,7 +72,7 @@ function generateQuiz() {
       questionDiv.appendChild(document.createElement("br"))
     })
     // Ajout de la <div> de la question au conteneur global du quiz
-    quizContainer.appendChild(questionDiv)
+    quizContainer.appendChild(questionDiv);
   });
 }
 
@@ -94,3 +94,4 @@ function submitQuiz() {
 generateQuiz();
 
 submitButton.addEventListener("click", submitQuiz);
+
