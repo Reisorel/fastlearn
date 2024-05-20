@@ -485,7 +485,7 @@
     return a + b
   }
   console.log(add(10,10))
-  // Ici on a un effet secondaire car on change un élément en déhors de la fonction
+  // Ici on a un effet secondaire car on change un élément en dehors de la fonction
             </code>
           </pre>
         <h3>Fonctions d'ordre supérieur</h3>
@@ -1470,7 +1470,39 @@ console.log(strawberry, grapes, apple)
         </code>
       </pre>
         <h2>Objet Set</h2>
+        <ul>
+          <li>
+            Un set est une collection de valeur unique. Utilisé pour la vérification d'élément ou la présence de
+            doublons.
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+            // Tableau avec des doublons
+  let nombres = [1, 2, 2, 3, 4, 4, 5, 6, 6, 7, 8, 8, 9];
+
+  // Conversion du tableau en Set pour éliminer les doublons
+  let nombresUniqueSet = new Set(nombres);
+
+  // Conversion du Set en tableau pour obtenir un tableau sans doublons
+  let nombresUniqueArray = Array.from(nombresUniqueSet);
+
+  // Affichage du tableau original et du tableau sans doublons
+  console.log("Tableau original :", nombres);
+  console.log("Tableau sans doublons :", nombresUniqueArray);
+          </code>
+        </pre>
+
         <h2>Objet Map</h2>
+        <ul>
+          <li>
+          </li>
+        </ul>
+        <pre style="tab-size: 2">
+          <code>
+
+          </code>
+        </pre>
         <h2>Objet WeakSet</h2>
         <h2>Objet WeakMap</h2>
         <h2>REST parameter / nombre infini d'arguments</h2>
